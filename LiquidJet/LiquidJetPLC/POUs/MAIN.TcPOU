@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <POU Name="MAIN" Id="{c8ef33a4-305b-4802-9860-82a055d32b0a}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	
+	{attribute 'TcLinkTo' := '
+		.bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E20 (EK1100)^E29 (EL1088)^Channel 1^Input;
+		.bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E20 (EK1100)^E29 (EL1088)^Channel 3^Input'}
+	MJetX	: DUT_MotionStage;
+	
+	{attribute 'TcLinkTo' := '
+		.bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E20 (EK1100)^E29 (EL1088)^Channel 5^Input;
+		.bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E20 (EK1100)^E29 (EL1088)^Channel 7^Input'}
+	MJetY	: DUT_MotionStage;
+	
+	{attribute 'TcLinkTo' := '
+		.bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E20 (EK1100)^E29 (EL1088)^Channel 2^Input;
+		.bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E20 (EK1100)^E29 (EL1088)^Channel 4^Input'}
+	MJetZ	: DUT_MotionStage;
+	
+	{attribute 'TcLinkTo' := '
+		.bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E20 (EK1100)^E29 (EL1088)^Channel 6^Input;
+		.bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E20 (EK1100)^E29 (EL1088)^Channel 8^Input'}
+	MEpix	: DUT_MotionStage;
+	
+	{attribute 'TcLinkTo' := '
+		.bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E20 (EK1100)^E22 (EL1088)^Channel 1^Input;
+		.bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E20 (EK1100)^E22 (EL1088)^Channel 3^Input;
+		.bHome					:= TIID^Device 1 (EtherCAT)^E20 (EK1100)^E22 (EL1088)^Channel 5^Input'}
+	MTopX	: DUT_MotionStage;
+	
+	{attribute 'TcLinkTo' := '
+		.bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E20 (EK1100)^E22 (EL1088)^Channel 2^Input;
+		.bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E20 (EK1100)^E22 (EL1088)^Channel 4^Input;
+		.bHome					:= TIID^Device 1 (EtherCAT)^E20 (EK1100)^E22 (EL1088)^Channel 6^Input'}
+	MTopY	: DUT_MotionStage;
+	
+	{attribute 'TcLinkTo' := '
+		.bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E20 (EK1100)^E25 (EL1088)^Channel 1^Input;
+		.bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E20 (EK1100)^E25 (EL1088)^Channel 3^Input;
+		.bHome					:= TIID^Device 1 (EtherCAT)^E20 (EK1100)^E25 (EL1088)^Channel 5^Input'}
+	MBotX	: DUT_MotionStage;
+	
+	{attribute 'TcLinkTo' := '
+		.bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E20 (EK1100)^E25 (EL1088)^Channel 2^Input;
+		.bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E20 (EK1100)^E25 (EL1088)^Channel 4^Input;
+		.bHome					:= TIID^Device 1 (EtherCAT)^E20 (EK1100)^E25 (EL1088)^Channel 6^Input'}
+	MBotY	: DUT_MotionStage;
+	
+	fbMotionJetX	: FB_MotionStage;
+	fbMotionJetY	: FB_MotionStage;
+	fbMotionJetZ	: FB_MotionStage;
+	fbMotionEpix	: FB_MotionStage;
+	fbMotionTopX	: FB_MotionStage;
+	fbMotionTopY	: FB_MotionStage;
+	fbMotionBotX	: FB_MotionStage;
+	fbMotionBotY	: FB_MotionStage;
+	
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[//Update Axis status
+MJetX.Axis.ReadStatus();
+MJetY.Axis.ReadStatus();
+MJetZ.Axis.ReadStatus();
+MEpix.Axis.ReadStatus();
+MTopX.Axis.ReadStatus();
+MTopY.Axis.ReadStatus();
+MBotX.Axis.ReadStatus();
+MBotY.Axis.ReadStatus();
+
+//fbMotion
+fbMotionJetX(stMotionStage := MJetX);
+fbMotionJetY(stMotionStage := MJetY);
+fbMotionJetZ(stMotionStage := MJetZ);
+fbMotionEpix(stMotionStage := MEpix);
+fbMotionTopX(stMotionStage := MTopX);
+fbMotionTopY(stMotionStage := MTopY);
+fbMotionBotX(stMotionStage := MBotX);
+fbMotionBotY(stMotionStage := MBotY);
+
+//Hardware Enable
+MJetX.bHardwareEnable	:= TRUE;
+MJetY.bHardwareEnable	:= TRUE;
+MJetZ.bHardwareEnable	:= TRUE;
+MEpix.bHardwareEnable	:= TRUE;
+MTopX.bHardwareEnable	:= TRUE;
+MTopY.bHardwareEnable	:= TRUE;
+MBotX.bHardwareEnable	:= TRUE;
+MBotY.bHardwareEnable	:= TRUE;]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="2" Count="0" />
+      <LineId Id="24" Count="1" />
+      <LineId Id="23" Count="0" />
+      <LineId Id="27" Count="1" />
+      <LineId Id="26" Count="0" />
+      <LineId Id="29" Count="1" />
+      <LineId Id="32" Count="0" />
+      <LineId Id="31" Count="0" />
+      <LineId Id="33" Count="5" />
+      <LineId Id="40" Count="0" />
+      <LineId Id="39" Count="0" />
+      <LineId Id="42" Count="0" />
+      <LineId Id="41" Count="0" />
+      <LineId Id="44" Count="6" />
+      <LineId Id="58" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
