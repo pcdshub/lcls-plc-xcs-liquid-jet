@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <POU Name="MAIN" Id="{c8ef33a4-305b-4802-9860-82a055d32b0a}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	{attribute 'pytmc' := 'pv: XCS:LJH:JET:X'}
+	{attribute 'TcLinkTo' := '
+		.bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 1^Input;
+		.bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 3^Input'}
+	MJetX	: DUT_MotionStage;
+
+	{attribute 'pytmc' := 'pv: XCS:LJH:JET:Y'}
+	{attribute 'TcLinkTo' := '
+		.bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 5^Input;
+		.bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 7^Input'}
+	MJetY	: DUT_MotionStage;
+	
+	{attribute 'pytmc' := 'pv: XCS:LJH:JET:Z'}
+	{attribute 'TcLinkTo' := '
+		.bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 2^Input;
+		.bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 4^Input'}
+	MJetZ	: DUT_MotionStage;
+	
+	{attribute 'pytmc' := 'pv: XCS:LJH:DET:X'}
+	{attribute 'TcLinkTo' := '
+		.bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 6^Input;
+		.bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 8^Input'}
+	MEpix	: DUT_MotionStage;
+	
+	{attribute 'pytmc' := 'pv: XCS:LJH:SS:TOP_X'}
+	{attribute 'TcLinkTo' := '
+		.bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E22 (EL1088)^Channel 1^Input;
+		.bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E22 (EL1088)^Channel 3^Input;
+		.bHome					:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E22 (EL1088)^Channel 5^Input'}
+	MTopX	: DUT_MotionStage;
+	
+	{attribute 'pytmc' := 'pv: XCS:LJH:SS:TOP_Y'}
+	{attribute 'TcLinkTo' := '
+		.bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E22 (EL1088)^Channel 2^Input;
+		.bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E22 (EL1088)^Channel 4^Input;
+		.bHome					:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E22 (EL1088)^Channel 6^Input'}
+	MTopY	: DUT_MotionStage;
+	
+	{attribute 'pytmc' := 'pv: XCS:LJH:SS:BOT_X'}
+	{attribute 'TcLinkTo' := '
+		.bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E25 (EL1088)^Channel 1^Input;
+		.bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E25 (EL1088)^Channel 3^Input;
+		.bHome					:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E25 (EL1088)^Channel 5^Input'}
+	MBotX	: DUT_MotionStage;
+	
+	{attribute 'pytmc' := 'pv: XCS:LJH:SS:BOT_Y'}
+	{attribute 'TcLinkTo' := '
+		.bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E25 (EL1088)^Channel 2^Input;
+		.bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E25 (EL1088)^Channel 4^Input;
+		.bHome					:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E25 (EL1088)^Channel 6^Input'}
+	MBotY	: DUT_MotionStage;
+	
+	fbMotionJetX	: FB_MotionStage;
+	fbMotionJetY	: FB_MotionStage;
+	fbMotionJetZ	: FB_MotionStage;
+	fbMotionEpix	: FB_MotionStage;
+	fbMotionTopX	: FB_MotionStage;
+	fbMotionTopY	: FB_MotionStage;
+	fbMotionBotX	: FB_MotionStage;
+	fbMotionBotY	: FB_MotionStage;
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^E0 (EK1200)^E5 (EL2004)^Channel 1^Output'}
+	bGigePower AT %Q* : Bool;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[//Update Axis status
+MJetX.Axis.ReadStatus();
+MJetY.Axis.ReadStatus();
+MJetZ.Axis.ReadStatus();
+MEpix.Axis.ReadStatus();
+MTopX.Axis.ReadStatus();
+MTopY.Axis.ReadStatus();
+MBotX.Axis.ReadStatus();
+MBotY.Axis.ReadStatus();
+
+//fbMotion
+fbMotionJetX(stMotionStage := MJetX);
+fbMotionJetY(stMotionStage := MJetY);
+fbMotionJetZ(stMotionStage := MJetZ);
+fbMotionEpix(stMotionStage := MEpix);
+fbMotionTopX(stMotionStage := MTopX);
+fbMotionTopY(stMotionStage := MTopY);
+fbMotionBotX(stMotionStage := MBotX);
+fbMotionBotY(stMotionStage := MBotY);
+
+//Hardware Enable
+MJetX.bHardwareEnable	:= TRUE;
+MJetY.bHardwareEnable	:= TRUE;
+MJetZ.bHardwareEnable	:= TRUE;
+MEpix.bHardwareEnable	:= TRUE;
+MTopX.bHardwareEnable	:= TRUE;
+MTopY.bHardwareEnable	:= TRUE;
+MBotX.bHardwareEnable	:= TRUE;
+MBotY.bHardwareEnable	:= TRUE;
+
+//Gige Power
+bGigePower := TRUE;]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="3" Count="27" />
+      <LineId Id="2" Count="0" />
+      <LineId Id="98" Count="0" />
+      <LineId Id="97" Count="0" />
+      <LineId Id="99" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
