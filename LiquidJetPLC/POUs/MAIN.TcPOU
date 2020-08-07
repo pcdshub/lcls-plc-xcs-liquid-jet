@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
-  <POU Name="MAIN" Id="{c8ef33a4-305b-4802-9860-82a055d32b0a}" SpecialFunc="None">
-    <Declaration><![CDATA[PROGRAM MAIN
+  <POU Name="Main" Id="{c8ef33a4-305b-4802-9860-82a055d32b0a}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM Main
 VAR
 	{attribute 'pytmc' := 'pv: XCS:LJH:JET:X'}
 	{attribute 'TcLinkTo' := '
@@ -101,7 +101,7 @@ MBotY.bHardwareEnable	:= TRUE;
 //Gige Power
 bGigePower := TRUE;]]></ST>
     </Implementation>
-    <LineIds Name="MAIN">
+    <LineIds Name="Main">
       <LineId Id="3" Count="27" />
       <LineId Id="2" Count="0" />
       <LineId Id="98" Count="0" />
