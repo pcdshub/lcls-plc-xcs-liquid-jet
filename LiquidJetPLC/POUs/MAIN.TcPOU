@@ -98,12 +98,26 @@ MTopY.bHardwareEnable	:= TRUE;
 MBotX.bHardwareEnable	:= TRUE;
 MBotY.bHardwareEnable	:= TRUE;
 
+//Power Self
+MJetX.bPowerSelf	:= TRUE;
+MJetY.bPowerSelf	:= TRUE;
+MJetZ.bPowerSelf	:= TRUE;
+MEpix.bPowerSelf	:= TRUE;
+MTopX.bPowerSelf	:= TRUE;
+MTopY.bPowerSelf	:= TRUE;
+MBotX.bPowerSelf	:= TRUE;
+MBotY.bPowerSelf	:= TRUE;
+
 //Gige Power
 bGigePower := TRUE;]]></ST>
     </Implementation>
     <LineIds Name="Main">
       <LineId Id="3" Count="27" />
       <LineId Id="2" Count="0" />
+      <LineId Id="174" Count="0" />
+      <LineId Id="165" Count="0" />
+      <LineId Id="167" Count="6" />
+      <LineId Id="166" Count="0" />
       <LineId Id="98" Count="0" />
       <LineId Id="97" Count="0" />
       <LineId Id="99" Count="0" />
