@@ -32,7 +32,7 @@
 				</SvbTask>
 				<Axis File="SS_TOP_X_MOT.xti" Id="9"/>
 				<Axis File="SS_TOP_Y_MOT.xti" Id="1"/>
-				<Axis File="SS_MOT_X_MOT.xti" Id="2"/>
+				<Axis File="SS_BOT_X_MOT.xti" Id="2"/>
 				<Axis File="SS_BOT_Y_MOT.xti" Id="8"/>
 				<Axis File="JET_X_MOT.xti" Id="3"/>
 				<Axis File="JET_Y_MOT.xti" Id="4"/>
