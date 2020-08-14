@@ -1321,15 +1321,21 @@ External Setpoint Generation:
 			</Relations>
 		</DataType>
 	</DataTypes>
-	<Axis Id="6" CreateSymbols="true" AxisType="1">
+	<Axis Id="8" CreateSymbols="true" AxisType="1">
 		<Name>__FILENAME__</Name>
 		<AxisPara>
-			<Dynamic AccelerationMaximum="50" DecelerationMaximum="50" Acceleration="23.8094883787375" Deceleration="23.8094883787375" Jerk="70.8614671071547"/>
-			<Velo RefSearch="0.5" RefSync="0.5" SlowManual="0.2" FastManual="0.5" Maximum="5"/>
+			<Dynamic AccelerationMaximum="50" DecelerationMaximum="50" Acceleration="23.8095" Deceleration="23.8095" Jerk="70.8615"/>
+			<Velo RefSearch="0.1" RefSync="0.1" SlowManual="0.1" FastManual="0.2" Maximum="0.2"/>
 			<OtherSettings AllowMotionCmdToSlave="true" PulseDistancePos="0.5" PulseDistanceNeg="0.5"/>
+			<ParameterChanged>8</ParameterChanged>
+			<ParameterChanged>39</ParameterChanged>
+			<ParameterChanged>7</ParameterChanged>
+			<ParameterChanged>18</ParameterChanged>
+			<ParameterChanged>9</ParameterChanged>
+			<ParameterChanged>6</ParameterChanged>
 		</AxisPara>
 		<Encoder Name="Enc" EncType="4">
-			<EncPara MaxCount="#x0000ffff">
+			<EncPara Inverse="true" MaxCount="#x0000ffff">
 				<Inc RefSoftSyncMask="#x0000ffff"/>
 			</EncPara>
 			<Vars VarGrpType="1">
@@ -1398,7 +1404,7 @@ External Setpoint Generation:
 			</Vars>
 		</Encoder>
 		<Drive Name="Drive" DrvType="24">
-			<DrvPara>
+			<DrvPara Inverse="true">
 				<Analog VeloReferenz="10" ScaleFactorActTorque="0.1"/>
 				<TimeComp TaskDelayCycles="1"/>
 			</DrvPara>
@@ -1489,7 +1495,7 @@ Drive Status 4 (manually linked):
 		</Drive>
 		<Controller Name="Ctrl" CtrType="1">
 			<CtrPara PriorControlFactor="1">
-				<PosDiffControl Range="1"/>
+				<PosDiffControl Range="0.5"/>
 				<Observer BandWidth="20"/>
 			</CtrPara>
 		</Controller>

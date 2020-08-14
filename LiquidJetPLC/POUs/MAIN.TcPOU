@@ -51,8 +51,8 @@ VAR
 	
 	{attribute 'pytmc' := 'pv: XCS:LJH:DET:X'}
 	{attribute 'TcLinkTo' := '
-		.bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 6^Input;
-		.bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 8^Input'}
+		.bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 6^Input;
+		.bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 8^Input'}
 	M8	: DUT_MotionStage; //VH_EPIX_X_MOT
 	
 	fbMotion1	: FB_MotionStage;

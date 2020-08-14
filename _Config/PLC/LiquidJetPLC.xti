@@ -2346,8 +2346,8 @@ External Setpoint Generation:
 				<Link VarA="PlcTask Inputs^Main.M6.bLimitForwardEnable" VarB="Channel 5^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^Main.M7.bLimitBackwardEnable" VarB="Channel 4^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^Main.M7.bLimitForwardEnable" VarB="Channel 2^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^Main.M8.bLimitBackwardEnable" VarB="Channel 8^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^Main.M8.bLimitForwardEnable" VarB="Channel 6^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^Main.M8.bLimitBackwardEnable" VarB="Channel 6^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^Main.M8.bLimitForwardEnable" VarB="Channel 8^Input" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TINC^NC-Task 1 SAF^Axes^JET_X_MOT">
 				<Link VarA="PlcTask Inputs^Main.M5.Axis.NcToPlc" VarB="Outputs^ToPlc"/>
