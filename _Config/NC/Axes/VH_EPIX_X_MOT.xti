@@ -1327,7 +1327,7 @@ External Setpoint Generation:
 			<Dynamic AccelerationMaximum="50" DecelerationMaximum="50" Acceleration="23.8095" Deceleration="23.8095" Jerk="70.8615"/>
 			<Velo RefSearch="0.1" RefSync="0.1" SlowManual="0.1" FastManual="0.2" Maximum="2"/>
 			<OtherSettings AllowMotionCmdToSlave="true" PulseDistancePos="0.5" PulseDistanceNeg="0.5"/>
-			<ParameterChanged>39</ParameterChanged>
+			<ParameterChanged>40</ParameterChanged>
 		</AxisPara>
 		<Encoder Name="Enc" EncType="4">
 			<EncPara ScaleFactorNumerator="0.0002" Inverse="true" MaxCount="#x0000ffff">
@@ -1494,7 +1494,7 @@ Drive Status 4 (manually linked):
 		</Drive>
 		<Controller Name="Ctrl" CtrType="1">
 			<CtrPara PriorControlFactor="1">
-				<PosDiffControl Range="0.5"/>
+				<PosDiffControl Range="0.8"/>
 				<Observer BandWidth="20"/>
 			</CtrPara>
 		</Controller>
