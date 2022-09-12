@@ -5,7 +5,7 @@ IOC_INSTANCE_PATH := $(shell pwd)
 PRODUCTION_IOC := 0
 
 PROJECT_NAME := LiquidJet
-PROJECT_PATH := ../LiquidJet.tsproj
+PROJECT_PATH := ../LiquidJetPLC/LiquidJet.tsproj
 PLC := LiquidJetPLC
 
 PYTMC_OPTS := 

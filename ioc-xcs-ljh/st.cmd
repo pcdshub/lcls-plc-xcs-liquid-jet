@@ -6,7 +6,7 @@
 epicsEnvSet("ADS_IOC_TOP", "$(TOP)" )
 
 epicsEnvSet("IOCNAME", "ioc-xcs-ljh" )
-epicsEnvSet("ENGINEER", "vanxiong" )
+epicsEnvSet("ENGINEER", "spencera" )
 epicsEnvSet("LOCATION", "PLC:LiquidJetPLC" )
 epicsEnvSet("IOCSH_PS1", "$(IOCNAME)> " )
 
@@ -18,8 +18,8 @@ dbLoadDatabase("$(ADS_IOC_TOP)/dbd/adsIoc.dbd")
 adsIoc_registerRecordDeviceDriver(pdbbase)
 
 epicsEnvSet("ASYN_PORT",        "ASYN_PLC")
-epicsEnvSet("IPADDR",           "172.21.80.220")
-epicsEnvSet("AMSID",            "172.21.80.220.1.1")
+epicsEnvSet("IPADDR",           "172.21.80.103")
+epicsEnvSet("AMSID",            "172.21.80.103.1.1")
 epicsEnvSet("AMS_PORT",         "851")
 epicsEnvSet("ADS_MAX_PARAMS",   "10000")
 epicsEnvSet("ADS_SAMPLE_MS",    "50")
