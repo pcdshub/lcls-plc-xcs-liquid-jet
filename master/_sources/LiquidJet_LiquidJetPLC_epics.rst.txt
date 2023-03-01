@@ -1,0 +1,3894 @@
+
+Data Types
+----------
+
+
+    
+LCLS_General.FB_LogMessage
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+    :header-rows: 1
+    :align: center
+
+    * - Record
+      - Type
+      - Description
+      - Pragma
+    * - $(PREFIX):Reset
+      - bo
+      - Rising-edge reset of trip
+      - | io: output
+
+
+    * - $(PREFIX):Reset_RBV
+      - bi
+      - Rising-edge reset of trip
+      - | io: output
+
+
+    * - $(PREFIX):Tripped_RBV
+      - bi
+      - Log message FB tripped
+      - | io: input
+
+
+                                               
+lcls_twincat_motion.DUT_MotionStage
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+    :header-rows: 1
+    :align: center
+
+    * - Record
+      - Type
+      - Description
+      - Pragma
+    * - $(PREFIX):PLC:bAllBackwardEnable_RBV
+      - bi
+      - Summary of axis permission to move backward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - $(PREFIX):PLC:bAllEnable_RBV
+      - bi
+      - Summary of axis permission to have power
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - $(PREFIX):PLC:bAllForwardEnable_RBV
+      - bi
+      - Summary of axis permission to move forward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - $(PREFIX):PLC:bBrakeRelease_RBV
+      - bi
+      - TRUE if brake released
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - $(PREFIX):PLC:bBusy_RBV
+      - bi
+      - TRUE if in the middle of a command
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - $(PREFIX):PLC:bDone_RBV
+      - bi
+      - TRUE if command finished successfully
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - $(PREFIX):PLC:bEnable
+      - bo
+      - Used internally to request enables
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - $(PREFIX):PLC:bEnable_RBV
+      - bi
+      - Used internally to request enables
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - $(PREFIX):PLC:bEnableDone_RBV
+      - bi
+      - TRUE if done enabling
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - $(PREFIX):PLC:bError_RBV
+      - bi
+      - TRUE if we are in an error state
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+        | update: 100hz notify
+
+
+    * - $(PREFIX):PLC:bExecute
+      - bo
+      - Used internally and by the IOC to start or stop
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - $(PREFIX):PLC:bExecute_RBV
+      - bi
+      - Used internally and by the IOC to start or stop
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - $(PREFIX):PLC:bGantryAxis_RBV
+      - bi
+      - TRUE if gantry EPS active
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - $(PREFIX):PLC:bGantryBackwardEnable_RBV
+      - bi
+      - TRUE if gantry ok to move backward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - $(PREFIX):PLC:bGantryForwardEnable_RBV
+      - bi
+      - TRUE if gantry ok to move forward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - $(PREFIX):PLC:bHardwareEnable_RBV
+      - bi
+      - TRUE if STO not hit
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - $(PREFIX):PLC:bHome_RBV
+      - bi
+      - TRUE if at homing switch
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - $(PREFIX):PLC:bHomeCmd
+      - bo
+      - Start the homing routine
+      - | io: output
+
+
+    * - $(PREFIX):PLC:bHomeCmd_RBV
+      - bi
+      - Start the homing routine
+      - | io: output
+
+
+    * - $(PREFIX):PLC:bHomed_RBV
+      - bi
+      - TRUE if the motor has been homed
+      - | io: input
+
+
+    * - $(PREFIX):PLC:bLimitBackwardEnable_RBV
+      - bi
+      - FALSE if reverse limit hit
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - $(PREFIX):PLC:bLimitForwardEnable_RBV
+      - bi
+      - FALSE if forward limit hit
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - $(PREFIX):PLC:bMoveCmd
+      - bo
+      - Start a move
+      - | io: output
+
+
+    * - $(PREFIX):PLC:bMoveCmd_RBV
+      - bi
+      - Start a move
+      - | io: output
+
+
+    * - $(PREFIX):PLC:bPowerSelf_RBV
+      - bi
+      - FALSE if axis is in PMPS
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - $(PREFIX):PLC:bReset
+      - bo
+      - Used internally to reset errors
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - $(PREFIX):PLC:bReset_RBV
+      - bi
+      - Used internally to reset errors
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - $(PREFIX):PLC:bSafetyReady_RBV
+      - bi
+      - TRUE if safe to start a move
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - $(PREFIX):PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - $(PREFIX):PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - $(PREFIX):PLC:fAcceleration
+      - ao
+      - Used internally and by the IOC to set acceleration
+      - | io: output
+
+
+    * - $(PREFIX):PLC:fAcceleration_RBV
+      - ai
+      - Used internally and by the IOC to set acceleration
+      - | io: output
+
+
+    * - $(PREFIX):PLC:fDeceleration
+      - ao
+      - Used internally and by the IOC to set deceleration
+      - | io: output
+
+
+    * - $(PREFIX):PLC:fDeceleration_RBV
+      - ai
+      - Used internally and by the IOC to set deceleration
+      - | io: output
+
+
+    * - $(PREFIX):PLC:fHomePosition
+      - ao
+      - Used internally and by the IOC to pick home position
+      - | io: output
+
+
+    * - $(PREFIX):PLC:fHomePosition_RBV
+      - ai
+      - Used internally and by the IOC to pick home position
+      - | io: output
+
+
+    * - $(PREFIX):PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
+
+
+    * - $(PREFIX):PLC:fPosition
+      - ao
+      - Used internally and by the IOC as the set position
+      - | io: output
+
+
+    * - $(PREFIX):PLC:fPosition_RBV
+      - ai
+      - Used internally and by the IOC as the set position
+      - | io: output
+
+
+    * - $(PREFIX):PLC:fVelocity
+      - ao
+      - Used internally and by the IOC to set velocity
+      - | io: output
+
+
+    * - $(PREFIX):PLC:fVelocity_RBV
+      - ai
+      - Used internally and by the IOC to set velocity
+      - | io: output
+
+
+    * - $(PREFIX):PLC:nBrakeMode_RBV
+      - mbbi
+      - Describes when the brake will be released
+      - | io: input
+
+
+    * - $(PREFIX):PLC:nCmdData
+      - longout
+      - Used internally and by the IOC to pass extra args
+      - | io: output
+
+
+    * - $(PREFIX):PLC:nCmdData_RBV
+      - longin
+      - Used internally and by the IOC to pass extra args
+      - | io: output
+
+
+    * - $(PREFIX):PLC:nCommand
+      - longout
+      - Used internally and by the IOC to pick move type
+      - | io: output
+
+
+    * - $(PREFIX):PLC:nCommand_RBV
+      - longin
+      - Used internally and by the IOC to pick move type
+      - | io: output
+
+
+    * - $(PREFIX):PLC:nEnableMode_RBV
+      - mbbi
+      - Describes when the axis will automatically get power
+      - | io: input
+
+
+    * - $(PREFIX):PLC:nEncoderCount_RBV
+      - longin
+      - Count from encoder hardware
+      - | io: input
+
+
+    * - $(PREFIX):PLC:nErrorId_RBV
+      - longin
+      - Error code if nonzero
+      - | io: input
+        | update: 100hz notify
+
+
+    * - $(PREFIX):PLC:nHomingMode_RBV
+      - mbbi
+      - Describes our homing strategy
+      - | io: input
+
+
+    * - $(PREFIX):PLC:nMotionAxisID_RBV
+      - longin
+      - Unique ID assigned to each axis in the NC
+      - | io: input
+
+
+    * - $(PREFIX):PLC:sErrorMessage_RBV
+      - waveform
+      - Message to identify the error state
+      - | io: input
+        | update: 100hz notify
+
+
+    * - $(PREFIX):PLC:sName_RBV
+      - waveform
+      - PLC program name
+      - | io: input
+
+
+ 
+lcls_twincat_motion.DUT_PositionState
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+    :header-rows: 1
+    :align: center
+
+    * - Record
+      - Type
+      - Description
+      - Pragma
+    * - $(PREFIX):ACCL
+      - ao
+      - Acceleration to use for moves to this state
+      - | io: output
+
+
+    * - $(PREFIX):ACCL_RBV
+      - ai
+      - Acceleration to use for moves to this state
+      - | io: output
+
+
+    * - $(PREFIX):DCCL
+      - ao
+      - Deceleration to use for moves to this state
+      - | io: output
+
+
+    * - $(PREFIX):DCCL_RBV
+      - ai
+      - Deceleration to use for moves to this state
+      - | io: output
+
+
+    * - $(PREFIX):DELTA
+      - ao
+      - Max deviation from position at this state
+      - | field: DRVL 0.0
+        | io: output
+
+
+    * - $(PREFIX):DELTA_RBV
+      - ai
+      - Max deviation from position at this state
+      - | field: DRVL 0.0
+        | io: output
+
+
+    * - $(PREFIX):ENCODER_RBV
+      - longin
+      - Encoder count associated with this state
+      - | io: input
+
+
+    * - $(PREFIX):LOCKED_RBV
+      - bi
+      - TRUE if state is immutable
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - $(PREFIX):MOVE_OK_RBV
+      - bi
+      - TRUE if the move would be safe
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - $(PREFIX):NAME_RBV
+      - waveform
+      - Name of this position state
+      - | io: input
+
+
+    * - $(PREFIX):SETPOINT
+      - ao
+      - Axis position associated with this state
+      - | io: output
+
+
+    * - $(PREFIX):SETPOINT_RBV
+      - ai
+      - Axis position associated with this state
+      - | io: output
+
+
+    * - $(PREFIX):VALID_RBV
+      - bi
+      - TRUE if this is a real state
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - $(PREFIX):VELO
+      - ao
+      - Speed at which to move to this state
+      - | io: output
+
+
+    * - $(PREFIX):VELO_RBV
+      - ai
+      - Speed at which to move to this state
+      - | io: output
+
+
+                                                                                   
+PMPS.ST_BeamParams
+^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+    :header-rows: 1
+    :align: center
+
+    * - Record
+      - Type
+      - Description
+      - Pragma
+    * - $(PREFIX):Cohort_RBV
+      - longin
+      - Cohort inc on each arb cycle
+      - | io: input
+
+
+    * - $(PREFIX):PhotonEnergyRanges_RBV
+      - longin
+      - $(SYMBOL).neVRange
+      - | field: EGU eV
+        | io: input
+
+
+    * - $(PREFIX):Rate_RBV
+      - longin
+      - $(SYMBOL).nRate
+      - | field: EGU Hz
+        | io: input
+
+
+    * - $(PREFIX):Transmission_RBV
+      - ai
+      - $(SYMBOL).nTran
+      - | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
+        | io: input
+
+
+    * - $(PREFIX):Valid_RBV
+      - bi
+      - $(SYMBOL).xValid
+      - | io: input
+
+
+    * - $(PREFIX):Veto_RBV
+      - waveform
+      - $(SYMBOL).aVetoDevices
+      - | io: input
+
+
+ 
+PMPS.ST_PMPS_Aperture
+^^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+    :header-rows: 1
+    :align: center
+
+    * - Record
+      - Type
+      - Description
+      - Pragma
+    * - $(PREFIX):Height_RBV
+      - ai
+      - $(SYMBOL).Height
+      - | field: EGU mm
+        | io: input
+
+
+    * - $(PREFIX):OK_RBV
+      - bi
+      - $(SYMBOL).xOK
+      - | io: input
+
+
+    * - $(PREFIX):Width_RBV
+      - ai
+      - $(SYMBOL).Width
+      - | field: EGU mm
+        | io: input
+
+
+   
+ST_PMPS_Aperture_IO
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+    :header-rows: 1
+    :align: center
+
+    * - Record
+      - Type
+      - Description
+      - Pragma
+    * - $(PREFIX):Height_RBV
+      - ai
+      - $(SYMBOL).Height
+      - | field: EGU mm
+        | io: input
+
+
+    * - $(PREFIX):OK_RBV
+      - bi
+      - $(SYMBOL).xOK
+      - | io: input
+
+
+    * - $(PREFIX):Width_RBV
+      - ai
+      - $(SYMBOL).Width
+      - | field: EGU mm
+        | io: input
+
+
+               
+Database Records
+----------------
+
+.. list-table::
+    :header-rows: 1
+    :align: center
+
+    * - Record
+      - Type
+      - Description
+      - Pragma
+    * - $(PREFIX)LCLSGeneral:GlobalLogTrickleTrip_RBV
+      - bi
+      - Tripped by overall log count
+      - | io: input
+
+
+    * - $(PREFIX)LCLSGeneral:LogHost_RBV
+      - waveform
+      - The log host IP address
+      - | io: output
+
+
+    * - $(PREFIX)LCLSGeneral:LogHost
+      - waveform
+      - The log host IP address
+      - | io: output
+
+
+    * - $(PREFIX)LCLSGeneral:LogPort_RBV
+      - longin
+      - The log host UDP port
+      - | io: output
+
+
+    * - $(PREFIX)LCLSGeneral:LogPort
+      - longout
+      - The log host UDP port
+      - | io: output
+
+
+    * - $(PREFIX)LCLSGeneral:LogMessageCount_RBV
+      - longin
+      - Total log messages on the last cycle
+      - | io: input
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:bAllBackwardEnable_RBV
+      - bi
+      - Summary of axis permission to move backward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:bAllEnable_RBV
+      - bi
+      - Summary of axis permission to have power
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:bAllForwardEnable_RBV
+      - bi
+      - Summary of axis permission to move forward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:bBrakeRelease_RBV
+      - bi
+      - TRUE if brake released
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:bBusy_RBV
+      - bi
+      - TRUE if in the middle of a command
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:bDone_RBV
+      - bi
+      - TRUE if command finished successfully
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:bEnable_RBV
+      - bi
+      - Used internally to request enables
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:bEnable
+      - bo
+      - Used internally to request enables
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:bEnableDone_RBV
+      - bi
+      - TRUE if done enabling
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:bError_RBV
+      - bi
+      - TRUE if we are in an error state
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+        | update: 100hz notify
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:bExecute_RBV
+      - bi
+      - Used internally and by the IOC to start or stop
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:bExecute
+      - bo
+      - Used internally and by the IOC to start or stop
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:bGantryAxis_RBV
+      - bi
+      - TRUE if gantry EPS active
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:bGantryBackwardEnable_RBV
+      - bi
+      - TRUE if gantry ok to move backward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:bGantryForwardEnable_RBV
+      - bi
+      - TRUE if gantry ok to move forward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:bHardwareEnable_RBV
+      - bi
+      - TRUE if STO not hit
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:bHome_RBV
+      - bi
+      - TRUE if at homing switch
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:bHomeCmd_RBV
+      - bi
+      - Start the homing routine
+      - | io: output
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:bHomeCmd
+      - bo
+      - Start the homing routine
+      - | io: output
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:bHomed_RBV
+      - bi
+      - TRUE if the motor has been homed
+      - | io: input
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:bLimitBackwardEnable_RBV
+      - bi
+      - FALSE if reverse limit hit
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:bLimitForwardEnable_RBV
+      - bi
+      - FALSE if forward limit hit
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:bMoveCmd_RBV
+      - bi
+      - Start a move
+      - | io: output
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:bMoveCmd
+      - bo
+      - Start a move
+      - | io: output
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:bPowerSelf_RBV
+      - bi
+      - FALSE if axis is in PMPS
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:bReset_RBV
+      - bi
+      - Used internally to reset errors
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:bReset
+      - bo
+      - Used internally to reset errors
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:bSafetyReady_RBV
+      - bi
+      - TRUE if safe to start a move
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:fAcceleration_RBV
+      - ai
+      - Used internally and by the IOC to set acceleration
+      - | io: output
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:fAcceleration
+      - ao
+      - Used internally and by the IOC to set acceleration
+      - | io: output
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:fDeceleration_RBV
+      - ai
+      - Used internally and by the IOC to set deceleration
+      - | io: output
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:fDeceleration
+      - ao
+      - Used internally and by the IOC to set deceleration
+      - | io: output
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:fHomePosition_RBV
+      - ai
+      - Used internally and by the IOC to pick home position
+      - | io: output
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:fHomePosition
+      - ao
+      - Used internally and by the IOC to pick home position
+      - | io: output
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:fPosition_RBV
+      - ai
+      - Used internally and by the IOC as the set position
+      - | io: output
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:fPosition
+      - ao
+      - Used internally and by the IOC as the set position
+      - | io: output
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:fVelocity_RBV
+      - ai
+      - Used internally and by the IOC to set velocity
+      - | io: output
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:fVelocity
+      - ao
+      - Used internally and by the IOC to set velocity
+      - | io: output
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:nBrakeMode_RBV
+      - mbbi
+      - Describes when the brake will be released
+      - | io: input
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:nCmdData_RBV
+      - longin
+      - Used internally and by the IOC to pass extra args
+      - | io: output
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:nCmdData
+      - longout
+      - Used internally and by the IOC to pass extra args
+      - | io: output
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:nCommand_RBV
+      - longin
+      - Used internally and by the IOC to pick move type
+      - | io: output
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:nCommand
+      - longout
+      - Used internally and by the IOC to pick move type
+      - | io: output
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:nEnableMode_RBV
+      - mbbi
+      - Describes when the axis will automatically get power
+      - | io: input
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:nEncoderCount_RBV
+      - longin
+      - Count from encoder hardware
+      - | io: input
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:nErrorId_RBV
+      - longin
+      - Error code if nonzero
+      - | io: input
+        | update: 100hz notify
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:nHomingMode_RBV
+      - mbbi
+      - Describes our homing strategy
+      - | io: input
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:nMotionAxisID_RBV
+      - longin
+      - Unique ID assigned to each axis in the NC
+      - | io: input
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:sErrorMessage_RBV
+      - waveform
+      - Message to identify the error state
+      - | io: input
+        | update: 100hz notify
+
+
+    * - XCS:LJH:SS:TOP_X:PLC:sName_RBV
+      - waveform
+      - PLC program name
+      - | io: input
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:bAllBackwardEnable_RBV
+      - bi
+      - Summary of axis permission to move backward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:bAllEnable_RBV
+      - bi
+      - Summary of axis permission to have power
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:bAllForwardEnable_RBV
+      - bi
+      - Summary of axis permission to move forward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:bBrakeRelease_RBV
+      - bi
+      - TRUE if brake released
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:bBusy_RBV
+      - bi
+      - TRUE if in the middle of a command
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:bDone_RBV
+      - bi
+      - TRUE if command finished successfully
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:bEnable_RBV
+      - bi
+      - Used internally to request enables
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:bEnable
+      - bo
+      - Used internally to request enables
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:bEnableDone_RBV
+      - bi
+      - TRUE if done enabling
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:bError_RBV
+      - bi
+      - TRUE if we are in an error state
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+        | update: 100hz notify
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:bExecute_RBV
+      - bi
+      - Used internally and by the IOC to start or stop
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:bExecute
+      - bo
+      - Used internally and by the IOC to start or stop
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:bGantryAxis_RBV
+      - bi
+      - TRUE if gantry EPS active
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:bGantryBackwardEnable_RBV
+      - bi
+      - TRUE if gantry ok to move backward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:bGantryForwardEnable_RBV
+      - bi
+      - TRUE if gantry ok to move forward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:bHardwareEnable_RBV
+      - bi
+      - TRUE if STO not hit
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:bHome_RBV
+      - bi
+      - TRUE if at homing switch
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:bHomeCmd_RBV
+      - bi
+      - Start the homing routine
+      - | io: output
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:bHomeCmd
+      - bo
+      - Start the homing routine
+      - | io: output
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:bHomed_RBV
+      - bi
+      - TRUE if the motor has been homed
+      - | io: input
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:bLimitBackwardEnable_RBV
+      - bi
+      - FALSE if reverse limit hit
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:bLimitForwardEnable_RBV
+      - bi
+      - FALSE if forward limit hit
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:bMoveCmd_RBV
+      - bi
+      - Start a move
+      - | io: output
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:bMoveCmd
+      - bo
+      - Start a move
+      - | io: output
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:bPowerSelf_RBV
+      - bi
+      - FALSE if axis is in PMPS
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:bReset_RBV
+      - bi
+      - Used internally to reset errors
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:bReset
+      - bo
+      - Used internally to reset errors
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:bSafetyReady_RBV
+      - bi
+      - TRUE if safe to start a move
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:fAcceleration_RBV
+      - ai
+      - Used internally and by the IOC to set acceleration
+      - | io: output
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:fAcceleration
+      - ao
+      - Used internally and by the IOC to set acceleration
+      - | io: output
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:fDeceleration_RBV
+      - ai
+      - Used internally and by the IOC to set deceleration
+      - | io: output
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:fDeceleration
+      - ao
+      - Used internally and by the IOC to set deceleration
+      - | io: output
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:fHomePosition_RBV
+      - ai
+      - Used internally and by the IOC to pick home position
+      - | io: output
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:fHomePosition
+      - ao
+      - Used internally and by the IOC to pick home position
+      - | io: output
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:fPosition_RBV
+      - ai
+      - Used internally and by the IOC as the set position
+      - | io: output
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:fPosition
+      - ao
+      - Used internally and by the IOC as the set position
+      - | io: output
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:fVelocity_RBV
+      - ai
+      - Used internally and by the IOC to set velocity
+      - | io: output
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:fVelocity
+      - ao
+      - Used internally and by the IOC to set velocity
+      - | io: output
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:nBrakeMode_RBV
+      - mbbi
+      - Describes when the brake will be released
+      - | io: input
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:nCmdData_RBV
+      - longin
+      - Used internally and by the IOC to pass extra args
+      - | io: output
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:nCmdData
+      - longout
+      - Used internally and by the IOC to pass extra args
+      - | io: output
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:nCommand_RBV
+      - longin
+      - Used internally and by the IOC to pick move type
+      - | io: output
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:nCommand
+      - longout
+      - Used internally and by the IOC to pick move type
+      - | io: output
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:nEnableMode_RBV
+      - mbbi
+      - Describes when the axis will automatically get power
+      - | io: input
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:nEncoderCount_RBV
+      - longin
+      - Count from encoder hardware
+      - | io: input
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:nErrorId_RBV
+      - longin
+      - Error code if nonzero
+      - | io: input
+        | update: 100hz notify
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:nHomingMode_RBV
+      - mbbi
+      - Describes our homing strategy
+      - | io: input
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:nMotionAxisID_RBV
+      - longin
+      - Unique ID assigned to each axis in the NC
+      - | io: input
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:sErrorMessage_RBV
+      - waveform
+      - Message to identify the error state
+      - | io: input
+        | update: 100hz notify
+
+
+    * - XCS:LJH:SS:TOP_Y:PLC:sName_RBV
+      - waveform
+      - PLC program name
+      - | io: input
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:bAllBackwardEnable_RBV
+      - bi
+      - Summary of axis permission to move backward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:bAllEnable_RBV
+      - bi
+      - Summary of axis permission to have power
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:bAllForwardEnable_RBV
+      - bi
+      - Summary of axis permission to move forward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:bBrakeRelease_RBV
+      - bi
+      - TRUE if brake released
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:bBusy_RBV
+      - bi
+      - TRUE if in the middle of a command
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:bDone_RBV
+      - bi
+      - TRUE if command finished successfully
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:bEnable_RBV
+      - bi
+      - Used internally to request enables
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:bEnable
+      - bo
+      - Used internally to request enables
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:bEnableDone_RBV
+      - bi
+      - TRUE if done enabling
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:bError_RBV
+      - bi
+      - TRUE if we are in an error state
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+        | update: 100hz notify
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:bExecute_RBV
+      - bi
+      - Used internally and by the IOC to start or stop
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:bExecute
+      - bo
+      - Used internally and by the IOC to start or stop
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:bGantryAxis_RBV
+      - bi
+      - TRUE if gantry EPS active
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:bGantryBackwardEnable_RBV
+      - bi
+      - TRUE if gantry ok to move backward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:bGantryForwardEnable_RBV
+      - bi
+      - TRUE if gantry ok to move forward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:bHardwareEnable_RBV
+      - bi
+      - TRUE if STO not hit
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:bHome_RBV
+      - bi
+      - TRUE if at homing switch
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:bHomeCmd_RBV
+      - bi
+      - Start the homing routine
+      - | io: output
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:bHomeCmd
+      - bo
+      - Start the homing routine
+      - | io: output
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:bHomed_RBV
+      - bi
+      - TRUE if the motor has been homed
+      - | io: input
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:bLimitBackwardEnable_RBV
+      - bi
+      - FALSE if reverse limit hit
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:bLimitForwardEnable_RBV
+      - bi
+      - FALSE if forward limit hit
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:bMoveCmd_RBV
+      - bi
+      - Start a move
+      - | io: output
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:bMoveCmd
+      - bo
+      - Start a move
+      - | io: output
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:bPowerSelf_RBV
+      - bi
+      - FALSE if axis is in PMPS
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:bReset_RBV
+      - bi
+      - Used internally to reset errors
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:bReset
+      - bo
+      - Used internally to reset errors
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:bSafetyReady_RBV
+      - bi
+      - TRUE if safe to start a move
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:fAcceleration_RBV
+      - ai
+      - Used internally and by the IOC to set acceleration
+      - | io: output
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:fAcceleration
+      - ao
+      - Used internally and by the IOC to set acceleration
+      - | io: output
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:fDeceleration_RBV
+      - ai
+      - Used internally and by the IOC to set deceleration
+      - | io: output
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:fDeceleration
+      - ao
+      - Used internally and by the IOC to set deceleration
+      - | io: output
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:fHomePosition_RBV
+      - ai
+      - Used internally and by the IOC to pick home position
+      - | io: output
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:fHomePosition
+      - ao
+      - Used internally and by the IOC to pick home position
+      - | io: output
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:fPosition_RBV
+      - ai
+      - Used internally and by the IOC as the set position
+      - | io: output
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:fPosition
+      - ao
+      - Used internally and by the IOC as the set position
+      - | io: output
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:fVelocity_RBV
+      - ai
+      - Used internally and by the IOC to set velocity
+      - | io: output
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:fVelocity
+      - ao
+      - Used internally and by the IOC to set velocity
+      - | io: output
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:nBrakeMode_RBV
+      - mbbi
+      - Describes when the brake will be released
+      - | io: input
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:nCmdData_RBV
+      - longin
+      - Used internally and by the IOC to pass extra args
+      - | io: output
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:nCmdData
+      - longout
+      - Used internally and by the IOC to pass extra args
+      - | io: output
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:nCommand_RBV
+      - longin
+      - Used internally and by the IOC to pick move type
+      - | io: output
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:nCommand
+      - longout
+      - Used internally and by the IOC to pick move type
+      - | io: output
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:nEnableMode_RBV
+      - mbbi
+      - Describes when the axis will automatically get power
+      - | io: input
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:nEncoderCount_RBV
+      - longin
+      - Count from encoder hardware
+      - | io: input
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:nErrorId_RBV
+      - longin
+      - Error code if nonzero
+      - | io: input
+        | update: 100hz notify
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:nHomingMode_RBV
+      - mbbi
+      - Describes our homing strategy
+      - | io: input
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:nMotionAxisID_RBV
+      - longin
+      - Unique ID assigned to each axis in the NC
+      - | io: input
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:sErrorMessage_RBV
+      - waveform
+      - Message to identify the error state
+      - | io: input
+        | update: 100hz notify
+
+
+    * - XCS:LJH:SS:BOT_X:PLC:sName_RBV
+      - waveform
+      - PLC program name
+      - | io: input
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:bAllBackwardEnable_RBV
+      - bi
+      - Summary of axis permission to move backward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:bAllEnable_RBV
+      - bi
+      - Summary of axis permission to have power
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:bAllForwardEnable_RBV
+      - bi
+      - Summary of axis permission to move forward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:bBrakeRelease_RBV
+      - bi
+      - TRUE if brake released
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:bBusy_RBV
+      - bi
+      - TRUE if in the middle of a command
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:bDone_RBV
+      - bi
+      - TRUE if command finished successfully
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:bEnable_RBV
+      - bi
+      - Used internally to request enables
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:bEnable
+      - bo
+      - Used internally to request enables
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:bEnableDone_RBV
+      - bi
+      - TRUE if done enabling
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:bError_RBV
+      - bi
+      - TRUE if we are in an error state
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+        | update: 100hz notify
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:bExecute_RBV
+      - bi
+      - Used internally and by the IOC to start or stop
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:bExecute
+      - bo
+      - Used internally and by the IOC to start or stop
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:bGantryAxis_RBV
+      - bi
+      - TRUE if gantry EPS active
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:bGantryBackwardEnable_RBV
+      - bi
+      - TRUE if gantry ok to move backward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:bGantryForwardEnable_RBV
+      - bi
+      - TRUE if gantry ok to move forward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:bHardwareEnable_RBV
+      - bi
+      - TRUE if STO not hit
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:bHome_RBV
+      - bi
+      - TRUE if at homing switch
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:bHomeCmd_RBV
+      - bi
+      - Start the homing routine
+      - | io: output
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:bHomeCmd
+      - bo
+      - Start the homing routine
+      - | io: output
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:bHomed_RBV
+      - bi
+      - TRUE if the motor has been homed
+      - | io: input
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:bLimitBackwardEnable_RBV
+      - bi
+      - FALSE if reverse limit hit
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:bLimitForwardEnable_RBV
+      - bi
+      - FALSE if forward limit hit
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:bMoveCmd_RBV
+      - bi
+      - Start a move
+      - | io: output
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:bMoveCmd
+      - bo
+      - Start a move
+      - | io: output
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:bPowerSelf_RBV
+      - bi
+      - FALSE if axis is in PMPS
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:bReset_RBV
+      - bi
+      - Used internally to reset errors
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:bReset
+      - bo
+      - Used internally to reset errors
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:bSafetyReady_RBV
+      - bi
+      - TRUE if safe to start a move
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:fAcceleration_RBV
+      - ai
+      - Used internally and by the IOC to set acceleration
+      - | io: output
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:fAcceleration
+      - ao
+      - Used internally and by the IOC to set acceleration
+      - | io: output
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:fDeceleration_RBV
+      - ai
+      - Used internally and by the IOC to set deceleration
+      - | io: output
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:fDeceleration
+      - ao
+      - Used internally and by the IOC to set deceleration
+      - | io: output
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:fHomePosition_RBV
+      - ai
+      - Used internally and by the IOC to pick home position
+      - | io: output
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:fHomePosition
+      - ao
+      - Used internally and by the IOC to pick home position
+      - | io: output
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:fPosition_RBV
+      - ai
+      - Used internally and by the IOC as the set position
+      - | io: output
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:fPosition
+      - ao
+      - Used internally and by the IOC as the set position
+      - | io: output
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:fVelocity_RBV
+      - ai
+      - Used internally and by the IOC to set velocity
+      - | io: output
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:fVelocity
+      - ao
+      - Used internally and by the IOC to set velocity
+      - | io: output
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:nBrakeMode_RBV
+      - mbbi
+      - Describes when the brake will be released
+      - | io: input
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:nCmdData_RBV
+      - longin
+      - Used internally and by the IOC to pass extra args
+      - | io: output
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:nCmdData
+      - longout
+      - Used internally and by the IOC to pass extra args
+      - | io: output
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:nCommand_RBV
+      - longin
+      - Used internally and by the IOC to pick move type
+      - | io: output
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:nCommand
+      - longout
+      - Used internally and by the IOC to pick move type
+      - | io: output
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:nEnableMode_RBV
+      - mbbi
+      - Describes when the axis will automatically get power
+      - | io: input
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:nEncoderCount_RBV
+      - longin
+      - Count from encoder hardware
+      - | io: input
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:nErrorId_RBV
+      - longin
+      - Error code if nonzero
+      - | io: input
+        | update: 100hz notify
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:nHomingMode_RBV
+      - mbbi
+      - Describes our homing strategy
+      - | io: input
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:nMotionAxisID_RBV
+      - longin
+      - Unique ID assigned to each axis in the NC
+      - | io: input
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:sErrorMessage_RBV
+      - waveform
+      - Message to identify the error state
+      - | io: input
+        | update: 100hz notify
+
+
+    * - XCS:LJH:SS:BOT_Y:PLC:sName_RBV
+      - waveform
+      - PLC program name
+      - | io: input
+
+
+    * - XCS:LJH:JET:X:PLC:bAllBackwardEnable_RBV
+      - bi
+      - Summary of axis permission to move backward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:X:PLC:bAllEnable_RBV
+      - bi
+      - Summary of axis permission to have power
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:X:PLC:bAllForwardEnable_RBV
+      - bi
+      - Summary of axis permission to move forward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:X:PLC:bBrakeRelease_RBV
+      - bi
+      - TRUE if brake released
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:X:PLC:bBusy_RBV
+      - bi
+      - TRUE if in the middle of a command
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:X:PLC:bDone_RBV
+      - bi
+      - TRUE if command finished successfully
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:X:PLC:bEnable_RBV
+      - bi
+      - Used internally to request enables
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:JET:X:PLC:bEnable
+      - bo
+      - Used internally to request enables
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:JET:X:PLC:bEnableDone_RBV
+      - bi
+      - TRUE if done enabling
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:X:PLC:bError_RBV
+      - bi
+      - TRUE if we are in an error state
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+        | update: 100hz notify
+
+
+    * - XCS:LJH:JET:X:PLC:bExecute_RBV
+      - bi
+      - Used internally and by the IOC to start or stop
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:JET:X:PLC:bExecute
+      - bo
+      - Used internally and by the IOC to start or stop
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:JET:X:PLC:bGantryAxis_RBV
+      - bi
+      - TRUE if gantry EPS active
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:X:PLC:bGantryBackwardEnable_RBV
+      - bi
+      - TRUE if gantry ok to move backward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:X:PLC:bGantryForwardEnable_RBV
+      - bi
+      - TRUE if gantry ok to move forward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:X:PLC:bHardwareEnable_RBV
+      - bi
+      - TRUE if STO not hit
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:X:PLC:bHome_RBV
+      - bi
+      - TRUE if at homing switch
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:X:PLC:bHomeCmd_RBV
+      - bi
+      - Start the homing routine
+      - | io: output
+
+
+    * - XCS:LJH:JET:X:PLC:bHomeCmd
+      - bo
+      - Start the homing routine
+      - | io: output
+
+
+    * - XCS:LJH:JET:X:PLC:bHomed_RBV
+      - bi
+      - TRUE if the motor has been homed
+      - | io: input
+
+
+    * - XCS:LJH:JET:X:PLC:bLimitBackwardEnable_RBV
+      - bi
+      - FALSE if reverse limit hit
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:X:PLC:bLimitForwardEnable_RBV
+      - bi
+      - FALSE if forward limit hit
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:X:PLC:bMoveCmd_RBV
+      - bi
+      - Start a move
+      - | io: output
+
+
+    * - XCS:LJH:JET:X:PLC:bMoveCmd
+      - bo
+      - Start a move
+      - | io: output
+
+
+    * - XCS:LJH:JET:X:PLC:bPowerSelf_RBV
+      - bi
+      - FALSE if axis is in PMPS
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:X:PLC:bReset_RBV
+      - bi
+      - Used internally to reset errors
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:JET:X:PLC:bReset
+      - bo
+      - Used internally to reset errors
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:JET:X:PLC:bSafetyReady_RBV
+      - bi
+      - TRUE if safe to start a move
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:X:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - XCS:LJH:JET:X:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - XCS:LJH:JET:X:PLC:fAcceleration_RBV
+      - ai
+      - Used internally and by the IOC to set acceleration
+      - | io: output
+
+
+    * - XCS:LJH:JET:X:PLC:fAcceleration
+      - ao
+      - Used internally and by the IOC to set acceleration
+      - | io: output
+
+
+    * - XCS:LJH:JET:X:PLC:fDeceleration_RBV
+      - ai
+      - Used internally and by the IOC to set deceleration
+      - | io: output
+
+
+    * - XCS:LJH:JET:X:PLC:fDeceleration
+      - ao
+      - Used internally and by the IOC to set deceleration
+      - | io: output
+
+
+    * - XCS:LJH:JET:X:PLC:fHomePosition_RBV
+      - ai
+      - Used internally and by the IOC to pick home position
+      - | io: output
+
+
+    * - XCS:LJH:JET:X:PLC:fHomePosition
+      - ao
+      - Used internally and by the IOC to pick home position
+      - | io: output
+
+
+    * - XCS:LJH:JET:X:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
+
+
+    * - XCS:LJH:JET:X:PLC:fPosition_RBV
+      - ai
+      - Used internally and by the IOC as the set position
+      - | io: output
+
+
+    * - XCS:LJH:JET:X:PLC:fPosition
+      - ao
+      - Used internally and by the IOC as the set position
+      - | io: output
+
+
+    * - XCS:LJH:JET:X:PLC:fVelocity_RBV
+      - ai
+      - Used internally and by the IOC to set velocity
+      - | io: output
+
+
+    * - XCS:LJH:JET:X:PLC:fVelocity
+      - ao
+      - Used internally and by the IOC to set velocity
+      - | io: output
+
+
+    * - XCS:LJH:JET:X:PLC:nBrakeMode_RBV
+      - mbbi
+      - Describes when the brake will be released
+      - | io: input
+
+
+    * - XCS:LJH:JET:X:PLC:nCmdData_RBV
+      - longin
+      - Used internally and by the IOC to pass extra args
+      - | io: output
+
+
+    * - XCS:LJH:JET:X:PLC:nCmdData
+      - longout
+      - Used internally and by the IOC to pass extra args
+      - | io: output
+
+
+    * - XCS:LJH:JET:X:PLC:nCommand_RBV
+      - longin
+      - Used internally and by the IOC to pick move type
+      - | io: output
+
+
+    * - XCS:LJH:JET:X:PLC:nCommand
+      - longout
+      - Used internally and by the IOC to pick move type
+      - | io: output
+
+
+    * - XCS:LJH:JET:X:PLC:nEnableMode_RBV
+      - mbbi
+      - Describes when the axis will automatically get power
+      - | io: input
+
+
+    * - XCS:LJH:JET:X:PLC:nEncoderCount_RBV
+      - longin
+      - Count from encoder hardware
+      - | io: input
+
+
+    * - XCS:LJH:JET:X:PLC:nErrorId_RBV
+      - longin
+      - Error code if nonzero
+      - | io: input
+        | update: 100hz notify
+
+
+    * - XCS:LJH:JET:X:PLC:nHomingMode_RBV
+      - mbbi
+      - Describes our homing strategy
+      - | io: input
+
+
+    * - XCS:LJH:JET:X:PLC:nMotionAxisID_RBV
+      - longin
+      - Unique ID assigned to each axis in the NC
+      - | io: input
+
+
+    * - XCS:LJH:JET:X:PLC:sErrorMessage_RBV
+      - waveform
+      - Message to identify the error state
+      - | io: input
+        | update: 100hz notify
+
+
+    * - XCS:LJH:JET:X:PLC:sName_RBV
+      - waveform
+      - PLC program name
+      - | io: input
+
+
+    * - XCS:LJH:JET:Y:PLC:bAllBackwardEnable_RBV
+      - bi
+      - Summary of axis permission to move backward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:Y:PLC:bAllEnable_RBV
+      - bi
+      - Summary of axis permission to have power
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:Y:PLC:bAllForwardEnable_RBV
+      - bi
+      - Summary of axis permission to move forward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:Y:PLC:bBrakeRelease_RBV
+      - bi
+      - TRUE if brake released
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:Y:PLC:bBusy_RBV
+      - bi
+      - TRUE if in the middle of a command
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:Y:PLC:bDone_RBV
+      - bi
+      - TRUE if command finished successfully
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:Y:PLC:bEnable_RBV
+      - bi
+      - Used internally to request enables
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:JET:Y:PLC:bEnable
+      - bo
+      - Used internally to request enables
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:JET:Y:PLC:bEnableDone_RBV
+      - bi
+      - TRUE if done enabling
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:Y:PLC:bError_RBV
+      - bi
+      - TRUE if we are in an error state
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+        | update: 100hz notify
+
+
+    * - XCS:LJH:JET:Y:PLC:bExecute_RBV
+      - bi
+      - Used internally and by the IOC to start or stop
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:JET:Y:PLC:bExecute
+      - bo
+      - Used internally and by the IOC to start or stop
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:JET:Y:PLC:bGantryAxis_RBV
+      - bi
+      - TRUE if gantry EPS active
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:Y:PLC:bGantryBackwardEnable_RBV
+      - bi
+      - TRUE if gantry ok to move backward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:Y:PLC:bGantryForwardEnable_RBV
+      - bi
+      - TRUE if gantry ok to move forward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:Y:PLC:bHardwareEnable_RBV
+      - bi
+      - TRUE if STO not hit
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:Y:PLC:bHome_RBV
+      - bi
+      - TRUE if at homing switch
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:Y:PLC:bHomeCmd_RBV
+      - bi
+      - Start the homing routine
+      - | io: output
+
+
+    * - XCS:LJH:JET:Y:PLC:bHomeCmd
+      - bo
+      - Start the homing routine
+      - | io: output
+
+
+    * - XCS:LJH:JET:Y:PLC:bHomed_RBV
+      - bi
+      - TRUE if the motor has been homed
+      - | io: input
+
+
+    * - XCS:LJH:JET:Y:PLC:bLimitBackwardEnable_RBV
+      - bi
+      - FALSE if reverse limit hit
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:Y:PLC:bLimitForwardEnable_RBV
+      - bi
+      - FALSE if forward limit hit
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:Y:PLC:bMoveCmd_RBV
+      - bi
+      - Start a move
+      - | io: output
+
+
+    * - XCS:LJH:JET:Y:PLC:bMoveCmd
+      - bo
+      - Start a move
+      - | io: output
+
+
+    * - XCS:LJH:JET:Y:PLC:bPowerSelf_RBV
+      - bi
+      - FALSE if axis is in PMPS
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:Y:PLC:bReset_RBV
+      - bi
+      - Used internally to reset errors
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:JET:Y:PLC:bReset
+      - bo
+      - Used internally to reset errors
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:JET:Y:PLC:bSafetyReady_RBV
+      - bi
+      - TRUE if safe to start a move
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:Y:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - XCS:LJH:JET:Y:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - XCS:LJH:JET:Y:PLC:fAcceleration_RBV
+      - ai
+      - Used internally and by the IOC to set acceleration
+      - | io: output
+
+
+    * - XCS:LJH:JET:Y:PLC:fAcceleration
+      - ao
+      - Used internally and by the IOC to set acceleration
+      - | io: output
+
+
+    * - XCS:LJH:JET:Y:PLC:fDeceleration_RBV
+      - ai
+      - Used internally and by the IOC to set deceleration
+      - | io: output
+
+
+    * - XCS:LJH:JET:Y:PLC:fDeceleration
+      - ao
+      - Used internally and by the IOC to set deceleration
+      - | io: output
+
+
+    * - XCS:LJH:JET:Y:PLC:fHomePosition_RBV
+      - ai
+      - Used internally and by the IOC to pick home position
+      - | io: output
+
+
+    * - XCS:LJH:JET:Y:PLC:fHomePosition
+      - ao
+      - Used internally and by the IOC to pick home position
+      - | io: output
+
+
+    * - XCS:LJH:JET:Y:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
+
+
+    * - XCS:LJH:JET:Y:PLC:fPosition_RBV
+      - ai
+      - Used internally and by the IOC as the set position
+      - | io: output
+
+
+    * - XCS:LJH:JET:Y:PLC:fPosition
+      - ao
+      - Used internally and by the IOC as the set position
+      - | io: output
+
+
+    * - XCS:LJH:JET:Y:PLC:fVelocity_RBV
+      - ai
+      - Used internally and by the IOC to set velocity
+      - | io: output
+
+
+    * - XCS:LJH:JET:Y:PLC:fVelocity
+      - ao
+      - Used internally and by the IOC to set velocity
+      - | io: output
+
+
+    * - XCS:LJH:JET:Y:PLC:nBrakeMode_RBV
+      - mbbi
+      - Describes when the brake will be released
+      - | io: input
+
+
+    * - XCS:LJH:JET:Y:PLC:nCmdData_RBV
+      - longin
+      - Used internally and by the IOC to pass extra args
+      - | io: output
+
+
+    * - XCS:LJH:JET:Y:PLC:nCmdData
+      - longout
+      - Used internally and by the IOC to pass extra args
+      - | io: output
+
+
+    * - XCS:LJH:JET:Y:PLC:nCommand_RBV
+      - longin
+      - Used internally and by the IOC to pick move type
+      - | io: output
+
+
+    * - XCS:LJH:JET:Y:PLC:nCommand
+      - longout
+      - Used internally and by the IOC to pick move type
+      - | io: output
+
+
+    * - XCS:LJH:JET:Y:PLC:nEnableMode_RBV
+      - mbbi
+      - Describes when the axis will automatically get power
+      - | io: input
+
+
+    * - XCS:LJH:JET:Y:PLC:nEncoderCount_RBV
+      - longin
+      - Count from encoder hardware
+      - | io: input
+
+
+    * - XCS:LJH:JET:Y:PLC:nErrorId_RBV
+      - longin
+      - Error code if nonzero
+      - | io: input
+        | update: 100hz notify
+
+
+    * - XCS:LJH:JET:Y:PLC:nHomingMode_RBV
+      - mbbi
+      - Describes our homing strategy
+      - | io: input
+
+
+    * - XCS:LJH:JET:Y:PLC:nMotionAxisID_RBV
+      - longin
+      - Unique ID assigned to each axis in the NC
+      - | io: input
+
+
+    * - XCS:LJH:JET:Y:PLC:sErrorMessage_RBV
+      - waveform
+      - Message to identify the error state
+      - | io: input
+        | update: 100hz notify
+
+
+    * - XCS:LJH:JET:Y:PLC:sName_RBV
+      - waveform
+      - PLC program name
+      - | io: input
+
+
+    * - XCS:LJH:JET:Z:PLC:bAllBackwardEnable_RBV
+      - bi
+      - Summary of axis permission to move backward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:Z:PLC:bAllEnable_RBV
+      - bi
+      - Summary of axis permission to have power
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:Z:PLC:bAllForwardEnable_RBV
+      - bi
+      - Summary of axis permission to move forward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:Z:PLC:bBrakeRelease_RBV
+      - bi
+      - TRUE if brake released
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:Z:PLC:bBusy_RBV
+      - bi
+      - TRUE if in the middle of a command
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:Z:PLC:bDone_RBV
+      - bi
+      - TRUE if command finished successfully
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:Z:PLC:bEnable_RBV
+      - bi
+      - Used internally to request enables
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:JET:Z:PLC:bEnable
+      - bo
+      - Used internally to request enables
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:JET:Z:PLC:bEnableDone_RBV
+      - bi
+      - TRUE if done enabling
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:Z:PLC:bError_RBV
+      - bi
+      - TRUE if we are in an error state
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+        | update: 100hz notify
+
+
+    * - XCS:LJH:JET:Z:PLC:bExecute_RBV
+      - bi
+      - Used internally and by the IOC to start or stop
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:JET:Z:PLC:bExecute
+      - bo
+      - Used internally and by the IOC to start or stop
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:JET:Z:PLC:bGantryAxis_RBV
+      - bi
+      - TRUE if gantry EPS active
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:Z:PLC:bGantryBackwardEnable_RBV
+      - bi
+      - TRUE if gantry ok to move backward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:Z:PLC:bGantryForwardEnable_RBV
+      - bi
+      - TRUE if gantry ok to move forward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:Z:PLC:bHardwareEnable_RBV
+      - bi
+      - TRUE if STO not hit
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:Z:PLC:bHome_RBV
+      - bi
+      - TRUE if at homing switch
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:Z:PLC:bHomeCmd_RBV
+      - bi
+      - Start the homing routine
+      - | io: output
+
+
+    * - XCS:LJH:JET:Z:PLC:bHomeCmd
+      - bo
+      - Start the homing routine
+      - | io: output
+
+
+    * - XCS:LJH:JET:Z:PLC:bHomed_RBV
+      - bi
+      - TRUE if the motor has been homed
+      - | io: input
+
+
+    * - XCS:LJH:JET:Z:PLC:bLimitBackwardEnable_RBV
+      - bi
+      - FALSE if reverse limit hit
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:Z:PLC:bLimitForwardEnable_RBV
+      - bi
+      - FALSE if forward limit hit
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:Z:PLC:bMoveCmd_RBV
+      - bi
+      - Start a move
+      - | io: output
+
+
+    * - XCS:LJH:JET:Z:PLC:bMoveCmd
+      - bo
+      - Start a move
+      - | io: output
+
+
+    * - XCS:LJH:JET:Z:PLC:bPowerSelf_RBV
+      - bi
+      - FALSE if axis is in PMPS
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:Z:PLC:bReset_RBV
+      - bi
+      - Used internally to reset errors
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:JET:Z:PLC:bReset
+      - bo
+      - Used internally to reset errors
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:JET:Z:PLC:bSafetyReady_RBV
+      - bi
+      - TRUE if safe to start a move
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:JET:Z:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - XCS:LJH:JET:Z:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - XCS:LJH:JET:Z:PLC:fAcceleration_RBV
+      - ai
+      - Used internally and by the IOC to set acceleration
+      - | io: output
+
+
+    * - XCS:LJH:JET:Z:PLC:fAcceleration
+      - ao
+      - Used internally and by the IOC to set acceleration
+      - | io: output
+
+
+    * - XCS:LJH:JET:Z:PLC:fDeceleration_RBV
+      - ai
+      - Used internally and by the IOC to set deceleration
+      - | io: output
+
+
+    * - XCS:LJH:JET:Z:PLC:fDeceleration
+      - ao
+      - Used internally and by the IOC to set deceleration
+      - | io: output
+
+
+    * - XCS:LJH:JET:Z:PLC:fHomePosition_RBV
+      - ai
+      - Used internally and by the IOC to pick home position
+      - | io: output
+
+
+    * - XCS:LJH:JET:Z:PLC:fHomePosition
+      - ao
+      - Used internally and by the IOC to pick home position
+      - | io: output
+
+
+    * - XCS:LJH:JET:Z:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
+
+
+    * - XCS:LJH:JET:Z:PLC:fPosition_RBV
+      - ai
+      - Used internally and by the IOC as the set position
+      - | io: output
+
+
+    * - XCS:LJH:JET:Z:PLC:fPosition
+      - ao
+      - Used internally and by the IOC as the set position
+      - | io: output
+
+
+    * - XCS:LJH:JET:Z:PLC:fVelocity_RBV
+      - ai
+      - Used internally and by the IOC to set velocity
+      - | io: output
+
+
+    * - XCS:LJH:JET:Z:PLC:fVelocity
+      - ao
+      - Used internally and by the IOC to set velocity
+      - | io: output
+
+
+    * - XCS:LJH:JET:Z:PLC:nBrakeMode_RBV
+      - mbbi
+      - Describes when the brake will be released
+      - | io: input
+
+
+    * - XCS:LJH:JET:Z:PLC:nCmdData_RBV
+      - longin
+      - Used internally and by the IOC to pass extra args
+      - | io: output
+
+
+    * - XCS:LJH:JET:Z:PLC:nCmdData
+      - longout
+      - Used internally and by the IOC to pass extra args
+      - | io: output
+
+
+    * - XCS:LJH:JET:Z:PLC:nCommand_RBV
+      - longin
+      - Used internally and by the IOC to pick move type
+      - | io: output
+
+
+    * - XCS:LJH:JET:Z:PLC:nCommand
+      - longout
+      - Used internally and by the IOC to pick move type
+      - | io: output
+
+
+    * - XCS:LJH:JET:Z:PLC:nEnableMode_RBV
+      - mbbi
+      - Describes when the axis will automatically get power
+      - | io: input
+
+
+    * - XCS:LJH:JET:Z:PLC:nEncoderCount_RBV
+      - longin
+      - Count from encoder hardware
+      - | io: input
+
+
+    * - XCS:LJH:JET:Z:PLC:nErrorId_RBV
+      - longin
+      - Error code if nonzero
+      - | io: input
+        | update: 100hz notify
+
+
+    * - XCS:LJH:JET:Z:PLC:nHomingMode_RBV
+      - mbbi
+      - Describes our homing strategy
+      - | io: input
+
+
+    * - XCS:LJH:JET:Z:PLC:nMotionAxisID_RBV
+      - longin
+      - Unique ID assigned to each axis in the NC
+      - | io: input
+
+
+    * - XCS:LJH:JET:Z:PLC:sErrorMessage_RBV
+      - waveform
+      - Message to identify the error state
+      - | io: input
+        | update: 100hz notify
+
+
+    * - XCS:LJH:JET:Z:PLC:sName_RBV
+      - waveform
+      - PLC program name
+      - | io: input
+
+
+    * - XCS:LJH:DET:X:PLC:bAllBackwardEnable_RBV
+      - bi
+      - Summary of axis permission to move backward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:DET:X:PLC:bAllEnable_RBV
+      - bi
+      - Summary of axis permission to have power
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:DET:X:PLC:bAllForwardEnable_RBV
+      - bi
+      - Summary of axis permission to move forward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:DET:X:PLC:bBrakeRelease_RBV
+      - bi
+      - TRUE if brake released
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:DET:X:PLC:bBusy_RBV
+      - bi
+      - TRUE if in the middle of a command
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:DET:X:PLC:bDone_RBV
+      - bi
+      - TRUE if command finished successfully
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:DET:X:PLC:bEnable_RBV
+      - bi
+      - Used internally to request enables
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:DET:X:PLC:bEnable
+      - bo
+      - Used internally to request enables
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:DET:X:PLC:bEnableDone_RBV
+      - bi
+      - TRUE if done enabling
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:DET:X:PLC:bError_RBV
+      - bi
+      - TRUE if we are in an error state
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+        | update: 100hz notify
+
+
+    * - XCS:LJH:DET:X:PLC:bExecute_RBV
+      - bi
+      - Used internally and by the IOC to start or stop
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:DET:X:PLC:bExecute
+      - bo
+      - Used internally and by the IOC to start or stop
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:DET:X:PLC:bGantryAxis_RBV
+      - bi
+      - TRUE if gantry EPS active
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:DET:X:PLC:bGantryBackwardEnable_RBV
+      - bi
+      - TRUE if gantry ok to move backward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:DET:X:PLC:bGantryForwardEnable_RBV
+      - bi
+      - TRUE if gantry ok to move forward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:DET:X:PLC:bHardwareEnable_RBV
+      - bi
+      - TRUE if STO not hit
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:DET:X:PLC:bHome_RBV
+      - bi
+      - TRUE if at homing switch
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:DET:X:PLC:bHomeCmd_RBV
+      - bi
+      - Start the homing routine
+      - | io: output
+
+
+    * - XCS:LJH:DET:X:PLC:bHomeCmd
+      - bo
+      - Start the homing routine
+      - | io: output
+
+
+    * - XCS:LJH:DET:X:PLC:bHomed_RBV
+      - bi
+      - TRUE if the motor has been homed
+      - | io: input
+
+
+    * - XCS:LJH:DET:X:PLC:bLimitBackwardEnable_RBV
+      - bi
+      - FALSE if reverse limit hit
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:DET:X:PLC:bLimitForwardEnable_RBV
+      - bi
+      - FALSE if forward limit hit
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:DET:X:PLC:bMoveCmd_RBV
+      - bi
+      - Start a move
+      - | io: output
+
+
+    * - XCS:LJH:DET:X:PLC:bMoveCmd
+      - bo
+      - Start a move
+      - | io: output
+
+
+    * - XCS:LJH:DET:X:PLC:bPowerSelf_RBV
+      - bi
+      - FALSE if axis is in PMPS
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:DET:X:PLC:bReset_RBV
+      - bi
+      - Used internally to reset errors
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:DET:X:PLC:bReset
+      - bo
+      - Used internally to reset errors
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - XCS:LJH:DET:X:PLC:bSafetyReady_RBV
+      - bi
+      - TRUE if safe to start a move
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - XCS:LJH:DET:X:PLC:bUserEnable_RBV
+      - bi
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - XCS:LJH:DET:X:PLC:bUserEnable
+      - bo
+      - Used to disable power entirely for an axis
+      - | field: ONAM ENABLE
+        | field: ZNAM DISABLE
+        | io: output
+
+
+    * - XCS:LJH:DET:X:PLC:fAcceleration_RBV
+      - ai
+      - Used internally and by the IOC to set acceleration
+      - | io: output
+
+
+    * - XCS:LJH:DET:X:PLC:fAcceleration
+      - ao
+      - Used internally and by the IOC to set acceleration
+      - | io: output
+
+
+    * - XCS:LJH:DET:X:PLC:fDeceleration_RBV
+      - ai
+      - Used internally and by the IOC to set deceleration
+      - | io: output
+
+
+    * - XCS:LJH:DET:X:PLC:fDeceleration
+      - ao
+      - Used internally and by the IOC to set deceleration
+      - | io: output
+
+
+    * - XCS:LJH:DET:X:PLC:fHomePosition_RBV
+      - ai
+      - Used internally and by the IOC to pick home position
+      - | io: output
+
+
+    * - XCS:LJH:DET:X:PLC:fHomePosition
+      - ao
+      - Used internally and by the IOC to pick home position
+      - | io: output
+
+
+    * - XCS:LJH:DET:X:PLC:fPosDiff_RBV
+      - ai
+      - Position lag difference
+      - | io: input
+
+
+    * - XCS:LJH:DET:X:PLC:fPosition_RBV
+      - ai
+      - Used internally and by the IOC as the set position
+      - | io: output
+
+
+    * - XCS:LJH:DET:X:PLC:fPosition
+      - ao
+      - Used internally and by the IOC as the set position
+      - | io: output
+
+
+    * - XCS:LJH:DET:X:PLC:fVelocity_RBV
+      - ai
+      - Used internally and by the IOC to set velocity
+      - | io: output
+
+
+    * - XCS:LJH:DET:X:PLC:fVelocity
+      - ao
+      - Used internally and by the IOC to set velocity
+      - | io: output
+
+
+    * - XCS:LJH:DET:X:PLC:nBrakeMode_RBV
+      - mbbi
+      - Describes when the brake will be released
+      - | io: input
+
+
+    * - XCS:LJH:DET:X:PLC:nCmdData_RBV
+      - longin
+      - Used internally and by the IOC to pass extra args
+      - | io: output
+
+
+    * - XCS:LJH:DET:X:PLC:nCmdData
+      - longout
+      - Used internally and by the IOC to pass extra args
+      - | io: output
+
+
+    * - XCS:LJH:DET:X:PLC:nCommand_RBV
+      - longin
+      - Used internally and by the IOC to pick move type
+      - | io: output
+
+
+    * - XCS:LJH:DET:X:PLC:nCommand
+      - longout
+      - Used internally and by the IOC to pick move type
+      - | io: output
+
+
+    * - XCS:LJH:DET:X:PLC:nEnableMode_RBV
+      - mbbi
+      - Describes when the axis will automatically get power
+      - | io: input
+
+
+    * - XCS:LJH:DET:X:PLC:nEncoderCount_RBV
+      - longin
+      - Count from encoder hardware
+      - | io: input
+
+
+    * - XCS:LJH:DET:X:PLC:nErrorId_RBV
+      - longin
+      - Error code if nonzero
+      - | io: input
+        | update: 100hz notify
+
+
+    * - XCS:LJH:DET:X:PLC:nHomingMode_RBV
+      - mbbi
+      - Describes our homing strategy
+      - | io: input
+
+
+    * - XCS:LJH:DET:X:PLC:nMotionAxisID_RBV
+      - longin
+      - Unique ID assigned to each axis in the NC
+      - | io: input
+
+
+    * - XCS:LJH:DET:X:PLC:sErrorMessage_RBV
+      - waveform
+      - Message to identify the error state
+      - | io: input
+        | update: 100hz notify
+
+
+    * - XCS:LJH:DET:X:PLC:sName_RBV
+      - waveform
+      - PLC program name
+      - | io: input
+
+
+    * - $(PREFIX)AccumulatedFastFaults_RBV
+      - longin
+      - PMPS_GVL.AccumulatedFF
+      - | io: input
+
+
+    * - $(PREFIX)SuccessfulPreemptions_RBV
+      - longin
+      - PMPS_GVL.SuccessfulPreemption
+      - | io: input
+
+
+    * - $(PREFIX)0RateBeamCnst:Veto_RBV
+      - waveform
+      - 0-rate beam constant
+      - | archive: 1s monitor
+        | io: input
+
+
+    * - $(PREFIX)0RateBeamCnst:Cohort_RBV
+      - longin
+      - Cohort inc on each arb cycle
+      - | archive: 1s monitor
+        | io: input
+
+
+    * - $(PREFIX)0RateBeamCnst:Rate_RBV
+      - longin
+      - 0-rate beam constant
+      - | archive: 1s monitor
+        | field: EGU Hz
+        | io: input
+
+
+    * - $(PREFIX)0RateBeamCnst:Transmission_RBV
+      - ai
+      - 0-rate beam constant
+      - | archive: 1s monitor
+        | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
+        | io: input
+
+
+    * - $(PREFIX)0RateBeamCnst:PhotonEnergyRanges_RBV
+      - longin
+      - 0-rate beam constant
+      - | archive: 1s monitor
+        | field: EGU eV
+        | io: input
+
+
+    * - $(PREFIX)0RateBeamCnst:Valid_RBV
+      - bi
+      - 0-rate beam constant
+      - | archive: 1s monitor
+        | io: input
+
+
+    * - $(PREFIX)FullBeamCnst:Veto_RBV
+      - waveform
+      - Full beam constant
+      - | archive: 1s monitor
+        | io: input
+
+
+    * - $(PREFIX)FullBeamCnst:Cohort_RBV
+      - longin
+      - Cohort inc on each arb cycle
+      - | archive: 1s monitor
+        | io: input
+
+
+    * - $(PREFIX)FullBeamCnst:Rate_RBV
+      - longin
+      - Full beam constant
+      - | archive: 1s monitor
+        | field: EGU Hz
+        | io: input
+
+
+    * - $(PREFIX)FullBeamCnst:Transmission_RBV
+      - ai
+      - Full beam constant
+      - | archive: 1s monitor
+        | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
+        | io: input
+
+
+    * - $(PREFIX)FullBeamCnst:PhotonEnergyRanges_RBV
+      - longin
+      - Full beam constant
+      - | archive: 1s monitor
+        | field: EGU eV
+        | io: input
+
+
+    * - $(PREFIX)FullBeamCnst:Valid_RBV
+      - bi
+      - Full beam constant
+      - | archive: 1s monitor
+        | io: input
+
+
+    * - $(PREFIX)eVRangeCnst_RBV
+      - waveform
+      - Active eV Range constants
+      - | archive: 1s monitor
+        | field: EGU eV
+        | io: input
+
+
+    * - $(PREFIX)K:eVRangeCnst_RBV
+      - waveform
+      - eV Range constants
+      - | archive: 1s monitor
+        | field: EGU eV
+        | io: input
+
+
+    * - $(PREFIX)L:eVRangeCnst_RBV
+      - waveform
+      - eV Range constants
+      - | archive: 1s monitor
+        | field: EGU eV
+        | io: input
+
+
+    * - $(PREFIX)eVRangeHyst_RBV
+      - ai
+      - eV Range hystersis
+      - | archive: 1s monitor
+        | field: EGU eV
+        | io: input
+
+
+    * - $(PREFIX)CurrentBP:Veto_RBV
+      - waveform
+      - PMPS_GVL.stCurrentBeamParameters.aVetoDevices
+      - | archive: 1s monitor
+        | io: input
+
+
+    * - $(PREFIX)CurrentBP:Cohort_RBV
+      - longin
+      - Cohort inc on each arb cycle
+      - | archive: 1s monitor
+        | io: input
+
+
+    * - $(PREFIX)CurrentBP:Rate_RBV
+      - longin
+      - PMPS_GVL.stCurrentBeamParameters.nRate
+      - | archive: 1s monitor
+        | field: EGU Hz
+        | io: input
+
+
+    * - $(PREFIX)CurrentBP:Transmission_RBV
+      - ai
+      - PMPS_GVL.stCurrentBeamParameters.nTran
+      - | archive: 1s monitor
+        | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
+        | io: input
+
+
+    * - $(PREFIX)CurrentBP:PhotonEnergyRanges_RBV
+      - longin
+      - PMPS_GVL.stCurrentBeamParameters.neVRange
+      - | archive: 1s monitor
+        | field: EGU eV
+        | io: input
+
+
+    * - $(PREFIX)CurrentBP:Valid_RBV
+      - bi
+      - PMPS_GVL.stCurrentBeamParameters.xValid
+      - | archive: 1s monitor
+        | io: input
+
+
+    * - $(PREFIX)RequestedBP:Veto_RBV
+      - waveform
+      - PMPS_GVL.stRequestedBeamParameters.aVetoDevices
+      - | archive: 1s monitor
+        | io: input
+
+
+    * - $(PREFIX)RequestedBP:Cohort_RBV
+      - longin
+      - Cohort inc on each arb cycle
+      - | archive: 1s monitor
+        | io: input
+
+
+    * - $(PREFIX)RequestedBP:Rate_RBV
+      - longin
+      - PMPS_GVL.stRequestedBeamParameters.nRate
+      - | archive: 1s monitor
+        | field: EGU Hz
+        | io: input
+
+
+    * - $(PREFIX)RequestedBP:Transmission_RBV
+      - ai
+      - PMPS_GVL.stRequestedBeamParameters.nTran
+      - | archive: 1s monitor
+        | field: HOPR 1
+        | field: LOPR 0
+        | field: PREC 2
+        | io: input
+
+
+    * - $(PREFIX)RequestedBP:PhotonEnergyRanges_RBV
+      - longin
+      - PMPS_GVL.stRequestedBeamParameters.neVRange
+      - | archive: 1s monitor
+        | field: EGU eV
+        | io: input
+
+
+    * - $(PREFIX)RequestedBP:Valid_RBV
+      - bi
+      - PMPS_GVL.stRequestedBeamParameters.xValid
+      - | archive: 1s monitor
+        | io: input
+
+
+

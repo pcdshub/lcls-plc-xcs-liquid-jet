@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DUTs &mdash; pcdshub/lcls-plc-xcs-liquid-jet  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/docs-versions-menu.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            pcdshub/lcls-plc-xcs-liquid-jet
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">DUTs</a></li>
+<li><a class="reference internal" href="#gvls">GVLs</a></li>
+<li><a class="reference internal" href="#pous">POUs</a><ul>
+<li><a class="reference internal" href="#main">Main</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pcdshub/lcls-plc-xcs-liquid-jet</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">DUTs</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/LiquidJet_LiquidJetPLC_source.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="duts">
+<h1>DUTs<a class="headerlink" href="#duts" title="Permalink to this heading"></a></h1>
+</section>
+<section id="gvls">
+<h1>GVLs<a class="headerlink" href="#gvls" title="Permalink to this heading"></a></h1>
+</section>
+<section id="pous">
+<h1>POUs<a class="headerlink" href="#pous" title="Permalink to this heading"></a></h1>
+<section id="main">
+<h2>Main<a class="headerlink" href="#main" title="Permalink to this heading"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">Main</span>
+<span class="n">VAR</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;pv: XCS:LJH:SS:TOP_X&#39;</span><span class="p">}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+            <span class="o">.</span><span class="n">bLimitForwardEnable</span>    <span class="o">:=</span> <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">E0</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">E7</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">E20</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)</span><span class="o">^</span><span class="n">E22</span> <span class="p">(</span><span class="n">EL1088</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Input</span><span class="p">;</span>
+            <span class="o">.</span><span class="n">bLimitBackwardEnable</span>   <span class="o">:=</span> <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">E0</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">E7</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">E20</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)</span><span class="o">^</span><span class="n">E22</span> <span class="p">(</span><span class="n">EL1088</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">3</span><span class="o">^</span><span class="n">Input</span><span class="p">;</span>
+            <span class="o">.</span><span class="n">bHome</span>                                  <span class="o">:=</span> <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">E0</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">E7</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">E20</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)</span><span class="o">^</span><span class="n">E22</span> <span class="p">(</span><span class="n">EL1088</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">5</span><span class="o">^</span><span class="n">Input</span><span class="s1">&#39;}</span>
+    <span class="n">M1</span>      <span class="p">:</span> <span class="n">DUT_MotionStage</span><span class="p">;</span> <span class="o">//</span><span class="n">SS_TOP_X_MOT</span>
+
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;pv: XCS:LJH:SS:TOP_Y&#39;</span><span class="p">}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+            <span class="o">.</span><span class="n">bLimitForwardEnable</span>    <span class="o">:=</span> <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">E0</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">E7</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">E20</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)</span><span class="o">^</span><span class="n">E22</span> <span class="p">(</span><span class="n">EL1088</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">2</span><span class="o">^</span><span class="n">Input</span><span class="p">;</span>
+            <span class="o">.</span><span class="n">bLimitBackwardEnable</span>   <span class="o">:=</span> <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">E0</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">E7</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">E20</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)</span><span class="o">^</span><span class="n">E22</span> <span class="p">(</span><span class="n">EL1088</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">4</span><span class="o">^</span><span class="n">Input</span><span class="p">;</span>
+            <span class="o">.</span><span class="n">bHome</span>                                  <span class="o">:=</span> <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">E0</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">E7</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">E20</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)</span><span class="o">^</span><span class="n">E22</span> <span class="p">(</span><span class="n">EL1088</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">6</span><span class="o">^</span><span class="n">Input</span><span class="s1">&#39;}</span>
+    <span class="n">M2</span>      <span class="p">:</span> <span class="n">DUT_MotionStage</span><span class="p">;</span> <span class="o">//</span><span class="n">SS_TOP_Y_MOT</span>
+
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;pv: XCS:LJH:SS:BOT_X&#39;</span><span class="p">}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+            <span class="o">.</span><span class="n">bLimitForwardEnable</span>    <span class="o">:=</span> <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">E0</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">E7</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">E20</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)</span><span class="o">^</span><span class="n">E25</span> <span class="p">(</span><span class="n">EL1088</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Input</span><span class="p">;</span>
+            <span class="o">.</span><span class="n">bLimitBackwardEnable</span>   <span class="o">:=</span> <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">E0</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">E7</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">E20</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)</span><span class="o">^</span><span class="n">E25</span> <span class="p">(</span><span class="n">EL1088</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">3</span><span class="o">^</span><span class="n">Input</span><span class="p">;</span>
+            <span class="o">.</span><span class="n">bHome</span>                                  <span class="o">:=</span> <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">E0</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">E7</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">E20</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)</span><span class="o">^</span><span class="n">E25</span> <span class="p">(</span><span class="n">EL1088</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">5</span><span class="o">^</span><span class="n">Input</span><span class="s1">&#39;}</span>
+    <span class="n">M3</span>      <span class="p">:</span> <span class="n">DUT_MotionStage</span><span class="p">;</span> <span class="o">//</span><span class="n">SS_BOT_X_MOT</span>
+
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;pv: XCS:LJH:SS:BOT_Y&#39;</span><span class="p">}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+            <span class="o">.</span><span class="n">bLimitForwardEnable</span>    <span class="o">:=</span> <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">E0</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">E7</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">E20</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)</span><span class="o">^</span><span class="n">E25</span> <span class="p">(</span><span class="n">EL1088</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">2</span><span class="o">^</span><span class="n">Input</span><span class="p">;</span>
+            <span class="o">.</span><span class="n">bLimitBackwardEnable</span>   <span class="o">:=</span> <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">E0</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">E7</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">E20</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)</span><span class="o">^</span><span class="n">E25</span> <span class="p">(</span><span class="n">EL1088</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">4</span><span class="o">^</span><span class="n">Input</span><span class="p">;</span>
+            <span class="o">.</span><span class="n">bHome</span>                                  <span class="o">:=</span> <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">E0</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">E7</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">E20</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)</span><span class="o">^</span><span class="n">E25</span> <span class="p">(</span><span class="n">EL1088</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">6</span><span class="o">^</span><span class="n">Input</span><span class="s1">&#39;}</span>
+    <span class="n">M4</span>      <span class="p">:</span> <span class="n">DUT_MotionStage</span><span class="p">;</span> <span class="o">//</span><span class="n">SS_BOT_Y_MOT</span>
+
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;pv: XCS:LJH:JET:X&#39;</span><span class="p">}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+            <span class="o">.</span><span class="n">bLimitBackwardEnable</span>   <span class="o">:=</span> <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">E0</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">E7</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">E20</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)</span><span class="o">^</span><span class="n">E29</span> <span class="p">(</span><span class="n">EL1088</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Input</span><span class="p">;</span>
+            <span class="o">.</span><span class="n">bLimitForwardEnable</span>    <span class="o">:=</span> <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">E0</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">E7</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">E20</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)</span><span class="o">^</span><span class="n">E29</span> <span class="p">(</span><span class="n">EL1088</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">3</span><span class="o">^</span><span class="n">Input</span><span class="s1">&#39;}</span>
+    <span class="n">M5</span>      <span class="p">:</span> <span class="n">DUT_MotionStage</span><span class="p">;</span> <span class="o">//</span><span class="n">JET_X_MOT</span>
+
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;pv: XCS:LJH:JET:Y&#39;</span><span class="p">}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+            <span class="o">.</span><span class="n">bLimitForwardEnable</span>    <span class="o">:=</span> <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">E0</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">E7</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">E20</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)</span><span class="o">^</span><span class="n">E29</span> <span class="p">(</span><span class="n">EL1088</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">5</span><span class="o">^</span><span class="n">Input</span><span class="p">;</span>
+            <span class="o">.</span><span class="n">bLimitBackwardEnable</span>   <span class="o">:=</span> <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">E0</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">E7</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">E20</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)</span><span class="o">^</span><span class="n">E29</span> <span class="p">(</span><span class="n">EL1088</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">7</span><span class="o">^</span><span class="n">Input</span><span class="s1">&#39;}</span>
+    <span class="n">M6</span>      <span class="p">:</span> <span class="n">DUT_MotionStage</span><span class="p">;</span> <span class="o">//</span><span class="n">JET_Y_MOT</span>
+
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;pv: XCS:LJH:JET:Z&#39;</span><span class="p">}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+            <span class="o">.</span><span class="n">bLimitForwardEnable</span>    <span class="o">:=</span> <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">E0</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">E7</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">E20</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)</span><span class="o">^</span><span class="n">E29</span> <span class="p">(</span><span class="n">EL1088</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">2</span><span class="o">^</span><span class="n">Input</span><span class="p">;</span>
+            <span class="o">.</span><span class="n">bLimitBackwardEnable</span>   <span class="o">:=</span> <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">E0</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">E7</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">E20</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)</span><span class="o">^</span><span class="n">E29</span> <span class="p">(</span><span class="n">EL1088</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">4</span><span class="o">^</span><span class="n">Input</span><span class="s1">&#39;}</span>
+    <span class="n">M7</span>      <span class="p">:</span> <span class="n">DUT_MotionStage</span><span class="p">;</span> <span class="o">//</span><span class="n">JET_Z_MOT</span>
+
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;pv: XCS:LJH:DET:X&#39;</span><span class="p">}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+            <span class="o">.</span><span class="n">bLimitBackwardEnable</span>   <span class="o">:=</span> <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">E0</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">E7</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">E20</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)</span><span class="o">^</span><span class="n">E29</span> <span class="p">(</span><span class="n">EL1088</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">6</span><span class="o">^</span><span class="n">Input</span><span class="p">;</span>
+            <span class="o">.</span><span class="n">bLimitForwardEnable</span>    <span class="o">:=</span> <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">E0</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">E7</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">E20</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)</span><span class="o">^</span><span class="n">E29</span> <span class="p">(</span><span class="n">EL1088</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">8</span><span class="o">^</span><span class="n">Input</span><span class="s1">&#39;}</span>
+    <span class="n">M8</span>      <span class="p">:</span> <span class="n">DUT_MotionStage</span><span class="p">;</span> <span class="o">//</span><span class="n">VH_EPIX_X_MOT</span>
+
+    <span class="n">fbMotion1</span>       <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
+    <span class="n">fbMotion2</span>       <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
+    <span class="n">fbMotion3</span>       <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
+    <span class="n">fbMotion4</span>       <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
+    <span class="n">fbMotion5</span>       <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
+    <span class="n">fbMotion6</span>       <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
+    <span class="n">fbMotion7</span>       <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
+    <span class="n">fbMotion8</span>       <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;TIID^Device 1 (EtherCAT)^E0 (EK1200)^E5 (EL2004)^Channel 1^Output&#39;</span><span class="p">}</span>
+    <span class="n">bGigePower</span> <span class="n">AT</span> <span class="o">%</span><span class="n">Q</span><span class="o">*</span> <span class="p">:</span> <span class="n">Bool</span><span class="p">;</span>
+<span class="n">END_VAR</span>
+<span class="o">//</span><span class="n">Update</span> <span class="n">Axis</span> <span class="n">status</span>
+<span class="n">M1</span><span class="o">.</span><span class="n">Axis</span><span class="o">.</span><span class="n">ReadStatus</span><span class="p">();</span>
+<span class="n">M2</span><span class="o">.</span><span class="n">Axis</span><span class="o">.</span><span class="n">ReadStatus</span><span class="p">();</span>
+<span class="n">M3</span><span class="o">.</span><span class="n">Axis</span><span class="o">.</span><span class="n">ReadStatus</span><span class="p">();</span>
+<span class="n">M4</span><span class="o">.</span><span class="n">Axis</span><span class="o">.</span><span class="n">ReadStatus</span><span class="p">();</span>
+<span class="n">M5</span><span class="o">.</span><span class="n">Axis</span><span class="o">.</span><span class="n">ReadStatus</span><span class="p">();</span>
+<span class="n">M6</span><span class="o">.</span><span class="n">Axis</span><span class="o">.</span><span class="n">ReadStatus</span><span class="p">();</span>
+<span class="n">M7</span><span class="o">.</span><span class="n">Axis</span><span class="o">.</span><span class="n">ReadStatus</span><span class="p">();</span>
+<span class="n">M8</span><span class="o">.</span><span class="n">Axis</span><span class="o">.</span><span class="n">ReadStatus</span><span class="p">();</span>
+
+<span class="o">//</span><span class="n">fbMotion</span>
+<span class="n">fbMotion1</span><span class="p">(</span><span class="n">stMotionStage</span> <span class="o">:=</span> <span class="n">M1</span><span class="p">);</span>
+<span class="n">fbMotion2</span><span class="p">(</span><span class="n">stMotionStage</span> <span class="o">:=</span> <span class="n">M2</span><span class="p">);</span>
+<span class="n">fbMotion3</span><span class="p">(</span><span class="n">stMotionStage</span> <span class="o">:=</span> <span class="n">M3</span><span class="p">);</span>
+<span class="n">fbMotion4</span><span class="p">(</span><span class="n">stMotionStage</span> <span class="o">:=</span> <span class="n">M4</span><span class="p">);</span>
+<span class="n">fbMotion5</span><span class="p">(</span><span class="n">stMotionStage</span> <span class="o">:=</span> <span class="n">M5</span><span class="p">);</span>
+<span class="n">fbMotion6</span><span class="p">(</span><span class="n">stMotionStage</span> <span class="o">:=</span> <span class="n">M6</span><span class="p">);</span>
+<span class="n">fbMotion7</span><span class="p">(</span><span class="n">stMotionStage</span> <span class="o">:=</span> <span class="n">M7</span><span class="p">);</span>
+<span class="n">fbMotion8</span><span class="p">(</span><span class="n">stMotionStage</span> <span class="o">:=</span> <span class="n">M8</span><span class="p">);</span>
+
+<span class="o">//</span><span class="n">Hardware</span> <span class="n">Enable</span>
+<span class="n">M1</span><span class="o">.</span><span class="n">bHardwareEnable</span>  <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
+<span class="n">M2</span><span class="o">.</span><span class="n">bHardwareEnable</span>  <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
+<span class="n">M3</span><span class="o">.</span><span class="n">bHardwareEnable</span>  <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
+<span class="n">M4</span><span class="o">.</span><span class="n">bHardwareEnable</span>  <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
+<span class="n">M5</span><span class="o">.</span><span class="n">bHardwareEnable</span>  <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
+<span class="n">M6</span><span class="o">.</span><span class="n">bHardwareEnable</span>  <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
+<span class="n">M7</span><span class="o">.</span><span class="n">bHardwareEnable</span>  <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
+<span class="n">M8</span><span class="o">.</span><span class="n">bHardwareEnable</span>  <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
+
+<span class="o">//</span><span class="n">Power</span> <span class="n">Self</span>
+<span class="n">M1</span><span class="o">.</span><span class="n">bPowerSelf</span>       <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
+<span class="n">M2</span><span class="o">.</span><span class="n">bPowerSelf</span>       <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
+<span class="n">M3</span><span class="o">.</span><span class="n">bPowerSelf</span>       <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
+<span class="n">M4</span><span class="o">.</span><span class="n">bPowerSelf</span>       <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
+<span class="n">M5</span><span class="o">.</span><span class="n">bPowerSelf</span>       <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
+<span class="n">M6</span><span class="o">.</span><span class="n">bPowerSelf</span>       <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
+<span class="n">M7</span><span class="o">.</span><span class="n">bPowerSelf</span>       <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
+<span class="n">M8</span><span class="o">.</span><span class="n">bPowerSelf</span>       <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
+
+<span class="o">//</span><span class="n">Gige</span> <span class="n">Power</span>
+<span class="n">bGigePower</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
+
+<span class="n">END_PROGRAM</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, SLAC National Accelerator Laboratory.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
