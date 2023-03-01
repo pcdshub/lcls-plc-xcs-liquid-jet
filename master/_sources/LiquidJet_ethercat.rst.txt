@@ -1,0 +1,491 @@
+
+EtherCAT Terminals
+------------------
+
+.. raw:: html
+
+    <ul class="tree">
+
+
+
+      <li>
+    <details open>
+      <summary>
+            <table width="100%">
+      <tr>
+        <td width="10%">
+          ID=22:
+        </td>
+        <td width="75%">E0 (EK1200)
+        </td>
+        <td>        </td>
+      </tr>
+      <tr>
+        <td>
+                  </td>
+        <td colspan="2">
+          EK1200-5000 EtherCAT Power supply (2A E-Bus)
+        </td>
+      </tr>
+    </table>
+      </summary>
+      <ul>
+
+            <li>
+                  <table width="100%">
+                <tr>
+                  <td width="10%">
+                    ID=23:
+                  </td>
+                  <td width="75%">EL5101_00_01
+                  </td>
+                  <td>        </td>
+                </tr>
+                <tr>
+                  <td>
+                            </td>
+                  <td colspan="2">
+                    EL5101 1Ch. Inc. Encoder 5V
+                  </td>
+                </tr>
+              </table>
+            </li>
+
+
+            <li>
+                  <table width="100%">
+                <tr>
+                  <td width="10%">
+                    ID=24:
+                  </td>
+                  <td width="75%">EL5101_00_02
+                  </td>
+                  <td>        </td>
+                </tr>
+                <tr>
+                  <td>
+                            </td>
+                  <td colspan="2">
+                    EL5101 1Ch. Inc. Encoder 5V
+                  </td>
+                </tr>
+              </table>
+            </li>
+
+
+            <li>
+                  <table width="100%">
+                <tr>
+                  <td width="10%">
+                    ID=25:
+                  </td>
+                  <td width="75%">EL5101_00_03
+                  </td>
+                  <td>        </td>
+                </tr>
+                <tr>
+                  <td>
+                            </td>
+                  <td colspan="2">
+                    EL5101 1Ch. Inc. Encoder 5V
+                  </td>
+                </tr>
+              </table>
+            </li>
+
+
+            <li>
+                  <table width="100%">
+                <tr>
+                  <td width="10%">
+                    ID=26:
+                  </td>
+                  <td width="75%">EL5101_00_04
+                  </td>
+                  <td>        </td>
+                </tr>
+                <tr>
+                  <td>
+                            </td>
+                  <td colspan="2">
+                    EL5101 1Ch. Inc. Encoder 5V
+                  </td>
+                </tr>
+              </table>
+            </li>
+
+
+            <li>
+                  <table width="100%">
+                <tr>
+                  <td width="10%">
+                    ID=1:
+                  </td>
+                  <td width="75%">EL5102_00_05
+                  </td>
+                  <td>        </td>
+                </tr>
+                <tr>
+                  <td>
+                            </td>
+                  <td colspan="2">
+                    EL5102 2Ch. Inc. Encoder 5V (RS422,TTL)
+                  </td>
+                </tr>
+              </table>
+            </li>
+
+
+            <li>
+                  <table width="100%">
+                <tr>
+                  <td width="10%">
+                    ID=2:
+                  </td>
+                  <td width="75%">EL5102_00_06
+                  </td>
+                  <td>        </td>
+                </tr>
+                <tr>
+                  <td>
+                            </td>
+                  <td colspan="2">
+                    EL5102 2Ch. Inc. Encoder 5V (RS422,TTL)
+                  </td>
+                </tr>
+              </table>
+            </li>
+
+
+            <li>
+                  <table width="100%">
+                <tr>
+                  <td width="10%">
+                    ID=28:
+                  </td>
+                  <td width="75%">EL6070_00_07
+                  </td>
+                  <td>        </td>
+                </tr>
+                <tr>
+                  <td>
+                            </td>
+                  <td colspan="2">
+                    EL6070 1Ch. Licensing-Terminal
+                  </td>
+                </tr>
+              </table>
+            </li>
+
+
+            <li>
+              <details open>
+                <summary>
+                      <table width="100%">
+                <tr>
+                  <td width="10%">
+                    ID=29:
+                  </td>
+                  <td width="75%">EK1122_00_08
+                  </td>
+                  <td>        </td>
+                </tr>
+                <tr>
+                  <td>
+                            </td>
+                  <td colspan="2">
+                    EK1122 2 port EtherCAT junction
+                  </td>
+                </tr>
+              </table>
+                </summary>
+                <ul>
+
+                      <li>
+                        <details open>
+                          <summary>
+                                <table width="100%">
+                          <tr>
+                            <td width="10%">
+                              ID=30:
+                            </td>
+                            <td width="75%">E20 (EK1100)
+                            </td>
+                            <td>        </td>
+                          </tr>
+                          <tr>
+                            <td>
+                                      </td>
+                            <td colspan="2">
+                              EK1100 EtherCAT Coupler (2A E-Bus)
+                            </td>
+                          </tr>
+                        </table>
+                          </summary>
+                          <ul>
+
+                                <li>
+                                      <table width="100%">
+                                    <tr>
+                                      <td width="10%">
+                                        ID=31:
+                                      </td>
+                                      <td width="75%">EL7041_01_21
+                                      </td>
+                                      <td>        </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                                </td>
+                                      <td colspan="2">
+                                        EL7041 1Ch. Stepper motor output stage (50V, 5A)
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </li>
+
+
+                                <li>
+                                      <table width="100%">
+                                    <tr>
+                                      <td width="10%">
+                                        ID=32:
+                                      </td>
+                                      <td width="75%">EL1088_01_22
+                                      </td>
+                                      <td>        </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                                </td>
+                                      <td colspan="2">
+                                        EL1088 8Ch. Dig. Input 24V, 3ms, negative
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </li>
+
+
+                                <li>
+                                      <table width="100%">
+                                    <tr>
+                                      <td width="10%">
+                                        ID=33:
+                                      </td>
+                                      <td width="75%">EL7041_01_23
+                                      </td>
+                                      <td>        </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                                </td>
+                                      <td colspan="2">
+                                        EL7041 1Ch. Stepper motor output stage (50V, 5A)
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </li>
+
+
+                                <li>
+                                      <table width="100%">
+                                    <tr>
+                                      <td width="10%">
+                                        ID=34:
+                                      </td>
+                                      <td width="75%">EL7041_01_24
+                                      </td>
+                                      <td>        </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                                </td>
+                                      <td colspan="2">
+                                        EL7041 1Ch. Stepper motor output stage (50V, 5A)
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </li>
+
+
+                                <li>
+                                      <table width="100%">
+                                    <tr>
+                                      <td width="10%">
+                                        ID=35:
+                                      </td>
+                                      <td width="75%">EL1088_01_25
+                                      </td>
+                                      <td>        </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                                </td>
+                                      <td colspan="2">
+                                        EL1088 8Ch. Dig. Input 24V, 3ms, negative
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </li>
+
+
+                                <li>
+                                      <table width="100%">
+                                    <tr>
+                                      <td width="10%">
+                                        ID=36:
+                                      </td>
+                                      <td width="75%">EL7041_01_26
+                                      </td>
+                                      <td>        </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                                </td>
+                                      <td colspan="2">
+                                        EL7041 1Ch. Stepper motor output stage (50V, 5A)
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </li>
+
+
+                                <li>
+                                      <table width="100%">
+                                    <tr>
+                                      <td width="10%">
+                                        ID=37:
+                                      </td>
+                                      <td width="75%">EL7041_01_27
+                                      </td>
+                                      <td>        </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                                </td>
+                                      <td colspan="2">
+                                        EL7041 1Ch. Stepper motor output stage (50V, 5A)
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </li>
+
+
+                                <li>
+                                      <table width="100%">
+                                    <tr>
+                                      <td width="10%">
+                                        ID=38:
+                                      </td>
+                                      <td width="75%">EL7041_01_28
+                                      </td>
+                                      <td>        </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                                </td>
+                                      <td colspan="2">
+                                        EL7041 1Ch. Stepper motor output stage (50V, 5A)
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </li>
+
+
+                                <li>
+                                      <table width="100%">
+                                    <tr>
+                                      <td width="10%">
+                                        ID=39:
+                                      </td>
+                                      <td width="75%">EL1088_01_29
+                                      </td>
+                                      <td>        </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                                </td>
+                                      <td colspan="2">
+                                        EL1088 8Ch. Dig. Input 24V, 3ms, negative
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </li>
+
+
+                                <li>
+                                      <table width="100%">
+                                    <tr>
+                                      <td width="10%">
+                                        ID=40:
+                                      </td>
+                                      <td width="75%">EL7041_01_30
+                                      </td>
+                                      <td>        </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                                </td>
+                                      <td colspan="2">
+                                        EL7041 1Ch. Stepper motor output stage (50V, 5A)
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </li>
+
+
+                                <li>
+                                      <table width="100%">
+                                    <tr>
+                                      <td width="10%">
+                                        ID=41:
+                                      </td>
+                                      <td width="75%">EL7041_01_31
+                                      </td>
+                                      <td>        </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                                </td>
+                                      <td colspan="2">
+                                        EL7041 1Ch. Stepper motor output stage (50V, 5A)
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </li>
+
+
+                                <li>
+                                      <table width="100%">
+                                    <tr>
+                                      <td width="10%">
+                                        ID=42:
+                                      </td>
+                                      <td width="75%">END (EL9012)
+                                      </td>
+                                      <td>        </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                                </td>
+                                      <td colspan="2">
+                                        EL9011 End Terminal
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </li>
+
+                          </ul>
+                        </details>
+                      </li>
+
+                </ul>
+              </details>
+            </li>
+
+      </ul>
+    </details>
+  </li>
+
+
+    </ul>
