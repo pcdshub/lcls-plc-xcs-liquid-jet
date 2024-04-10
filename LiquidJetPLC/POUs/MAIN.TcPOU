@@ -3,68 +3,68 @@
   <POU Name="Main" Id="{c8ef33a4-305b-4802-9860-82a055d32b0a}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM Main
 VAR
-	{attribute 'pytmc' := 'pv: XCS:LJH:SS:TOP_X'}
-	{attribute 'TcLinkTo' := '
-		.bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E22 (EL1088)^Channel 1^Input;
-		.bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E22 (EL1088)^Channel 3^Input;
-		.bHome					:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E22 (EL1088)^Channel 5^Input'}
-	M1	: DUT_MotionStage; //SS_TOP_X_MOT
-	
-	{attribute 'pytmc' := 'pv: XCS:LJH:SS:TOP_Y'}
-	{attribute 'TcLinkTo' := '
-		.bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E22 (EL1088)^Channel 2^Input;
-		.bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E22 (EL1088)^Channel 4^Input;
-		.bHome					:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E22 (EL1088)^Channel 6^Input'}
-	M2	: DUT_MotionStage; //SS_TOP_Y_MOT
-	
-	{attribute 'pytmc' := 'pv: XCS:LJH:SS:BOT_X'}
-	{attribute 'TcLinkTo' := '
-		.bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E25 (EL1088)^Channel 1^Input;
-		.bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E25 (EL1088)^Channel 3^Input;
-		.bHome					:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E25 (EL1088)^Channel 5^Input'}
-	M3	: DUT_MotionStage; //SS_BOT_X_MOT
-	
-	{attribute 'pytmc' := 'pv: XCS:LJH:SS:BOT_Y'}
-	{attribute 'TcLinkTo' := '
-		.bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E25 (EL1088)^Channel 2^Input;
-		.bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E25 (EL1088)^Channel 4^Input;
-		.bHome					:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E25 (EL1088)^Channel 6^Input'}
-	M4	: DUT_MotionStage; //SS_BOT_Y_MOT
-	
-	{attribute 'pytmc' := 'pv: XCS:LJH:JET:X'}
-	{attribute 'TcLinkTo' := '
-		.bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 1^Input;
-		.bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 3^Input'}
-	M5	: DUT_MotionStage; //JET_X_MOT
+    {attribute 'pytmc' := 'pv: XCS:LJH:SS:TOP_X'}
+    {attribute 'TcLinkTo' := '
+        .bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E22 (EL1088)^Channel 1^Input;
+        .bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E22 (EL1088)^Channel 3^Input;
+        .bHome					:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E22 (EL1088)^Channel 5^Input'}
+    M1	: DUT_MotionStage; //SS_TOP_X_MOT
 
-	{attribute 'pytmc' := 'pv: XCS:LJH:JET:Y'}
-	{attribute 'TcLinkTo' := '
-		.bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 5^Input;
-		.bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 7^Input'}
-	M6	: DUT_MotionStage; //JET_Y_MOT
-	
-	{attribute 'pytmc' := 'pv: XCS:LJH:JET:Z'}
-	{attribute 'TcLinkTo' := '
-		.bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 2^Input;
-		.bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 4^Input'}
-	M7	: DUT_MotionStage; //JET_Z_MOT
-	
-	{attribute 'pytmc' := 'pv: XCS:LJH:DET:X'}
-	{attribute 'TcLinkTo' := '
-		.bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 6^Input;
-		.bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 8^Input'}
-	M8	: DUT_MotionStage; //VH_EPIX_X_MOT
-	
-	fbMotion1	: FB_MotionStage;
-	fbMotion2	: FB_MotionStage;
-	fbMotion3	: FB_MotionStage;
-	fbMotion4	: FB_MotionStage;
-	fbMotion5	: FB_MotionStage;
-	fbMotion6	: FB_MotionStage;
-	fbMotion7	: FB_MotionStage;
-	fbMotion8	: FB_MotionStage;
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^E0 (EK1200)^E5 (EL2004)^Channel 1^Output'}
-	bGigePower AT %Q* : Bool;
+    {attribute 'pytmc' := 'pv: XCS:LJH:SS:TOP_Y'}
+    {attribute 'TcLinkTo' := '
+        .bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E22 (EL1088)^Channel 2^Input;
+        .bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E22 (EL1088)^Channel 4^Input;
+        .bHome					:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E22 (EL1088)^Channel 6^Input'}
+    M2	: DUT_MotionStage; //SS_TOP_Y_MOT
+
+    {attribute 'pytmc' := 'pv: XCS:LJH:SS:BOT_X'}
+    {attribute 'TcLinkTo' := '
+        .bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E25 (EL1088)^Channel 1^Input;
+        .bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E25 (EL1088)^Channel 3^Input;
+        .bHome					:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E25 (EL1088)^Channel 5^Input'}
+    M3	: DUT_MotionStage; //SS_BOT_X_MOT
+
+    {attribute 'pytmc' := 'pv: XCS:LJH:SS:BOT_Y'}
+    {attribute 'TcLinkTo' := '
+        .bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E25 (EL1088)^Channel 2^Input;
+        .bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E25 (EL1088)^Channel 4^Input;
+        .bHome					:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E25 (EL1088)^Channel 6^Input'}
+    M4	: DUT_MotionStage; //SS_BOT_Y_MOT
+
+    {attribute 'pytmc' := 'pv: XCS:LJH:JET:X'}
+    {attribute 'TcLinkTo' := '
+        .bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 1^Input;
+        .bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 3^Input'}
+    M5	: DUT_MotionStage; //JET_X_MOT
+
+    {attribute 'pytmc' := 'pv: XCS:LJH:JET:Y'}
+    {attribute 'TcLinkTo' := '
+        .bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 5^Input;
+        .bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 7^Input'}
+    M6	: DUT_MotionStage; //JET_Y_MOT
+
+    {attribute 'pytmc' := 'pv: XCS:LJH:JET:Z'}
+    {attribute 'TcLinkTo' := '
+        .bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 2^Input;
+        .bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 4^Input'}
+    M7	: DUT_MotionStage; //JET_Z_MOT
+
+    {attribute 'pytmc' := 'pv: XCS:LJH:DET:X'}
+    {attribute 'TcLinkTo' := '
+        .bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 6^Input;
+        .bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 8^Input'}
+    M8	: DUT_MotionStage; //VH_EPIX_X_MOT
+
+    fbMotion1	: FB_MotionStage;
+    fbMotion2	: FB_MotionStage;
+    fbMotion3	: FB_MotionStage;
+    fbMotion4	: FB_MotionStage;
+    fbMotion5	: FB_MotionStage;
+    fbMotion6	: FB_MotionStage;
+    fbMotion7	: FB_MotionStage;
+    fbMotion8	: FB_MotionStage;
+    {attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^E0 (EK1200)^E5 (EL2004)^Channel 1^Output'}
+    bGigePower AT %Q* : Bool;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -83,7 +83,7 @@ fbMotion1(stMotionStage := M1);
 fbMotion2(stMotionStage := M2);
 fbMotion3(stMotionStage := M3);
 fbMotion4(stMotionStage := M4);
-fbMotion5(stMotionStage := M5);    
+fbMotion5(stMotionStage := M5);
 fbMotion6(stMotionStage := M6);
 fbMotion7(stMotionStage := M7);
 fbMotion8(stMotionStage := M8);
@@ -111,16 +111,5 @@ M8.bPowerSelf	:= TRUE;
 //Gige Power
 bGigePower := TRUE;]]></ST>
     </Implementation>
-    <LineIds Name="Main">
-      <LineId Id="3" Count="27" />
-      <LineId Id="2" Count="0" />
-      <LineId Id="174" Count="0" />
-      <LineId Id="165" Count="0" />
-      <LineId Id="167" Count="6" />
-      <LineId Id="166" Count="0" />
-      <LineId Id="98" Count="0" />
-      <LineId Id="97" Count="0" />
-      <LineId Id="99" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>
