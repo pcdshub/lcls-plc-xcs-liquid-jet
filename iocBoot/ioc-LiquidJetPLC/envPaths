@@ -1,0 +1,2 @@
+epicsEnvSet("IOC_TOP", "/c/Users/nlentz/Documents/PLC/lcls-plc-xcs-liquid-jet/iocBoot/ioc-LiquidJetPLC")
+epicsEnvSet("IOC_DATA", "/cds/data/iocData")
