@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{4DE3406A-8BCB-A049-1F33-13F3E662ABE8}" GeneratedBy="TwinCAT XAE Plc">
+<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{EFA6E0F4-FA5F-6817-9982-45FB48E0AE2A}" GeneratedBy="TwinCAT XAE Plc">
   <DataTypes>
     <DataType>
       <Name Namespace="LCLS_General">ST_System</Name>
@@ -18820,7 +18820,7 @@ contributing fast faults, unless the FFO is currently vetoed.
       <SubItem>
         <Name>Width</Name>
         <Type GUID="{18071995-0000-0000-0000-00000000000D}">REAL</Type>
-        <Comment> distance between horizontal slits (x)</Comment>
+        <Comment>distance between horizontal slits (x)</Comment>
         <BitSize>32</BitSize>
         <BitOffs>0</BitOffs>
         <Properties>
@@ -18835,7 +18835,7 @@ contributing fast faults, unless the FFO is currently vetoed.
       <SubItem>
         <Name>Height</Name>
         <Type GUID="{18071995-0000-0000-0000-00000000000D}">REAL</Type>
-        <Comment> distance between vertical slits (y)</Comment>
+        <Comment>distance between vertical slits (y)</Comment>
         <BitSize>32</BitSize>
         <BitOffs>32</BitOffs>
         <Properties>
@@ -18850,7 +18850,7 @@ contributing fast faults, unless the FFO is currently vetoed.
       <SubItem>
         <Name>xOK</Name>
         <Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-        <Comment> status of aperture, false if error or in motion</Comment>
+        <Comment>status of aperture, false if error or in motion</Comment>
         <BitSize>8</BitSize>
         <BitOffs>64</BitOffs>
         <Properties>
@@ -41030,9 +41030,9 @@ External Setpoint Generation:
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>
-		.bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E22 (EL1088)^Channel 1^Input;
-		.bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E22 (EL1088)^Channel 3^Input;
-		.bHome					:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E22 (EL1088)^Channel 5^Input</Value>
+        .bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E22 (EL1088)^Channel 1^Input;
+        .bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E22 (EL1088)^Channel 3^Input;
+        .bHome					:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E22 (EL1088)^Channel 5^Input</Value>
               </Property>
             </Properties>
             <BitOffs>635608256</BitOffs>
@@ -41050,9 +41050,9 @@ External Setpoint Generation:
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>
-		.bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E22 (EL1088)^Channel 2^Input;
-		.bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E22 (EL1088)^Channel 4^Input;
-		.bHome					:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E22 (EL1088)^Channel 6^Input</Value>
+        .bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E22 (EL1088)^Channel 2^Input;
+        .bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E22 (EL1088)^Channel 4^Input;
+        .bHome					:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E22 (EL1088)^Channel 6^Input</Value>
               </Property>
             </Properties>
             <BitOffs>635633536</BitOffs>
@@ -41070,9 +41070,9 @@ External Setpoint Generation:
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>
-		.bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E25 (EL1088)^Channel 1^Input;
-		.bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E25 (EL1088)^Channel 3^Input;
-		.bHome					:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E25 (EL1088)^Channel 5^Input</Value>
+        .bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E25 (EL1088)^Channel 1^Input;
+        .bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E25 (EL1088)^Channel 3^Input;
+        .bHome					:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E25 (EL1088)^Channel 5^Input</Value>
               </Property>
             </Properties>
             <BitOffs>635658816</BitOffs>
@@ -41090,9 +41090,9 @@ External Setpoint Generation:
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>
-		.bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E25 (EL1088)^Channel 2^Input;
-		.bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E25 (EL1088)^Channel 4^Input;
-		.bHome					:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E25 (EL1088)^Channel 6^Input</Value>
+        .bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E25 (EL1088)^Channel 2^Input;
+        .bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E25 (EL1088)^Channel 4^Input;
+        .bHome					:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E25 (EL1088)^Channel 6^Input</Value>
               </Property>
             </Properties>
             <BitOffs>635684096</BitOffs>
@@ -41110,8 +41110,8 @@ External Setpoint Generation:
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>
-		.bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 1^Input;
-		.bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 3^Input</Value>
+        .bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 1^Input;
+        .bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 3^Input</Value>
               </Property>
             </Properties>
             <BitOffs>635709376</BitOffs>
@@ -41129,8 +41129,8 @@ External Setpoint Generation:
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>
-		.bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 5^Input;
-		.bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 7^Input</Value>
+        .bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 5^Input;
+        .bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 7^Input</Value>
               </Property>
             </Properties>
             <BitOffs>635734656</BitOffs>
@@ -41148,8 +41148,8 @@ External Setpoint Generation:
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>
-		.bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 2^Input;
-		.bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 4^Input</Value>
+        .bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 2^Input;
+        .bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 4^Input</Value>
               </Property>
             </Properties>
             <BitOffs>635759936</BitOffs>
@@ -41167,8 +41167,8 @@ External Setpoint Generation:
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>
-		.bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 6^Input;
-		.bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 8^Input</Value>
+        .bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 6^Input;
+        .bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 8^Input</Value>
               </Property>
             </Properties>
             <BitOffs>635785216</BitOffs>
@@ -41557,7 +41557,7 @@ External Setpoint Generation:
         </Property>
         <Property>
           <Name>ChangeDate</Name>
-          <Value>2024-04-10T10:27:37</Value>
+          <Value>2024-06-11T12:34:17</Value>
         </Property>
         <Property>
           <Name>GeneratedCodeSize</Name>
