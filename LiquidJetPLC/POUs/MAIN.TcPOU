@@ -1,74 +1,76 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <POU Name="Main" Id="{c8ef33a4-305b-4802-9860-82a055d32b0a}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM Main
 VAR
     {attribute 'pytmc' := 'pv: XCS:LJH:SS:TOP_X'}
     {attribute 'TcLinkTo' := '
-        .bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E22 (EL1088)^Channel 1^Input;
-        .bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E22 (EL1088)^Channel 3^Input;
-        .bHome					:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E22 (EL1088)^Channel 5^Input'}
-    M1	: DUT_MotionStage; //SS_TOP_X_MOT
+        .bLimitForwardEnable	:= TIIB[EL1088_01_22]^Channel 1^Input;
+        .bLimitBackwardEnable	:= TIIB[EL1088_01_22]^Channel 3^Input;
+        .bHome					:= TIIB[EL1088_01_22]^Channel 5^Input'}
+    M1	: ST_MotionStage:= (sName := 'XCS:LJH:SS:TOP_X'); //SS_TOP_X_MOT
 
     {attribute 'pytmc' := 'pv: XCS:LJH:SS:TOP_Y'}
     {attribute 'TcLinkTo' := '
-        .bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E22 (EL1088)^Channel 2^Input;
-        .bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E22 (EL1088)^Channel 4^Input;
-        .bHome					:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E22 (EL1088)^Channel 6^Input'}
-    M2	: DUT_MotionStage; //SS_TOP_Y_MOT
+        .bLimitForwardEnable	:= TIIB[EL1088_01_22]^Channel 2^Input;
+        .bLimitBackwardEnable	:= TIIB[EL1088_01_22]^Channel 4^Input;
+        .bHome					:= TIIB[EL1088_01_22]^Channel 6^Input'}
+    M2	: ST_MotionStage:= (sName := 'XCS:LJH:SS:TOP_Y'); //SS_TOP_Y_MOT
 
     {attribute 'pytmc' := 'pv: XCS:LJH:SS:BOT_X'}
     {attribute 'TcLinkTo' := '
-        .bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E25 (EL1088)^Channel 1^Input;
-        .bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E25 (EL1088)^Channel 3^Input;
-        .bHome					:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E25 (EL1088)^Channel 5^Input'}
-    M3	: DUT_MotionStage; //SS_BOT_X_MOT
+        .bLimitForwardEnable	:= TIIB[EL1088_01_25]^Channel 1^Input;
+        .bLimitBackwardEnable	:= TIIB[EL1088_01_25]^Channel 3^Input;
+        .bHome					:= TIIB[EL1088_01_25]^Channel 5^Input'}
+    M3	: ST_MotionStage:= (sName := 'XCS:LJH:SS:BOT_X'); //SS_BOT_X_MOT
 
     {attribute 'pytmc' := 'pv: XCS:LJH:SS:BOT_Y'}
     {attribute 'TcLinkTo' := '
-        .bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E25 (EL1088)^Channel 2^Input;
-        .bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E25 (EL1088)^Channel 4^Input;
-        .bHome					:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E25 (EL1088)^Channel 6^Input'}
-    M4	: DUT_MotionStage; //SS_BOT_Y_MOT
+        .bLimitForwardEnable	:= TIIB[EL1088_01_25]^Channel 2^Input;
+        .bLimitBackwardEnable	:= TIIB[EL1088_01_25]^Channel 4^Input;
+        .bHome					:= TIIB[EL1088_01_25]^Channel 6^Input'}
+    M4	: ST_MotionStage:= (sName := 'XCS:LJH:SS:BOT_Y'); //SS_BOT_Y_MOT
 
     {attribute 'pytmc' := 'pv: XCS:LJH:JET:X'}
     {attribute 'TcLinkTo' := '
-        .bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 1^Input;
-        .bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 3^Input'}
-    M5	: DUT_MotionStage; //JET_X_MOT
+        .bLimitBackwardEnable	:= TIIB[EL1088_01_29]^Channel 1^Input;
+        .bLimitForwardEnable	:= TIIB[EL1088_01_29]^Channel 3^Input'}
+    M5	: ST_MotionStage:= (sName := 'XCS:LJH:JET:X'); //JET_X_MOT
 
     {attribute 'pytmc' := 'pv: XCS:LJH:JET:Y'}
     {attribute 'TcLinkTo' := '
-        .bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 5^Input;
-        .bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 7^Input'}
-    M6	: DUT_MotionStage; //JET_Y_MOT
+        .bLimitForwardEnable	:= TIIB[EL1088_01_29]^Channel 5^Input;
+        .bLimitBackwardEnable	:= TIIB[EL1088_01_29]^Channel 7^Input'}
+    M6	: ST_MotionStage:= (sName := 'XCS:LJH:JET:Y'); //JET_Y_MOT
 
     {attribute 'pytmc' := 'pv: XCS:LJH:JET:Z'}
     {attribute 'TcLinkTo' := '
-        .bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 2^Input;
-        .bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 4^Input'}
-    M7	: DUT_MotionStage; //JET_Z_MOT
+        .bLimitForwardEnable	:= TIIB[EL1088_01_29]^Channel 2^Input;
+        .bLimitBackwardEnable	:= TIIB[EL1088_01_29]^Channel 4^Input'}
+    M7	: ST_MotionStage:= (sName := 'XCS:LJH:JET:Z'); //JET_Z_MOT
 
     {attribute 'pytmc' := 'pv: XCS:LJH:DET:X'}
     {attribute 'TcLinkTo' := '
-        .bLimitBackwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 6^Input;
-        .bLimitForwardEnable	:= TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)^Channel 8^Input'}
-    M8	: DUT_MotionStage; //VH_EPIX_X_MOT
+        .bLimitBackwardEnable	:= TIIB[EL1088_01_29]^Channel 6^Input;
+        .bLimitForwardEnable	:= TIIB[EL1088_01_29]^Channel 8^Input'}
+    M8: ST_MotionStage:= (sName := 'XCS:LJH:DET:X') ; //VH_EPIX_X_MOT
 
-    fbMotion1	: FB_MotionStage;
-    fbMotion2	: FB_MotionStage;
-    fbMotion3	: FB_MotionStage;
-    fbMotion4	: FB_MotionStage;
-    fbMotion5	: FB_MotionStage;
-    fbMotion6	: FB_MotionStage;
-    fbMotion7	: FB_MotionStage;
-    fbMotion8	: FB_MotionStage;
-    {attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^E0 (EK1200)^E5 (EL2004)^Channel 1^Output'}
-    bGigePower AT %Q* : Bool;
+    fb_SS_TOP_X	: FB_MotionStage;
+    fb_SS_TOP_Y	: FB_MotionStage;
+    fb_SS_BOT_X	: FB_MotionStage;
+    fb_SS_BOT_Y	: FB_MotionStage;
+    fb_JET_X	: FB_MotionStage;
+    fb_JET_Y	: FB_MotionStage;
+    fb_JET_Z	: FB_MotionStage;
+    fb_VH_EPIX_X: FB_MotionStage;
+
+    bInit: BOOL := TRUE;
+
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[//Update Axis status
+// Might want to remove
 M1.Axis.ReadStatus();
 M2.Axis.ReadStatus();
 M3.Axis.ReadStatus();
@@ -79,14 +81,82 @@ M7.Axis.ReadStatus();
 M8.Axis.ReadStatus();
 
 //fbMotion
-fbMotion1(stMotionStage := M1);
-fbMotion2(stMotionStage := M2);
-fbMotion3(stMotionStage := M3);
-fbMotion4(stMotionStage := M4);
-fbMotion5(stMotionStage := M5);
-fbMotion6(stMotionStage := M6);
-fbMotion7(stMotionStage := M7);
-fbMotion8(stMotionStage := M8);
+fb_SS_TOP_X(stMotionStage := M1);
+fb_SS_TOP_Y(stMotionStage := M2);
+fb_SS_BOT_X(stMotionStage := M3);
+fb_SS_BOT_Y(stMotionStage := M4);
+fb_JET_X(stMotionStage := M5);
+fb_JET_Y(stMotionStage := M6);
+fb_JET_Z(stMotionStage := M7);
+fb_VH_EPIX_X(stMotionStage := M8);
+
+IF bInit THEN
+    bInit := FALSE;
+
+    M1.bHardwareEnable := TRUE;
+    M1.bPowerSelf      := TRUE;
+    M1.fVelocity       := 0.1;
+    M1.nEnableMode     := E_StageEnableMode.DURING_MOTION;
+    M1.nBrakeMode      := E_StageBrakeMode.NO_BRAKE;
+    M1.nHomingMode     := E_EpicsHomeCmd.LOW_LIMIT;
+    M1.fHomePosition   := 0;
+
+    M2.bHardwareEnable := TRUE;
+    M2.bPowerSelf      := TRUE;
+    M2.fVelocity       := 0.1;
+    M2.nEnableMode     := E_StageEnableMode.DURING_MOTION;
+    M2.nBrakeMode      := E_StageBrakeMode.NO_BRAKE;
+    M2.nHomingMode     := E_EpicsHomeCmd.LOW_LIMIT;
+    M2.fHomePosition   := 0;
+
+    M3.bHardwareEnable := TRUE;
+    M3.bPowerSelf      := TRUE;
+    M3.fVelocity       := 0.1;
+    M3.nEnableMode     := E_StageEnableMode.DURING_MOTION;
+    M3.nBrakeMode      := E_StageBrakeMode.NO_BRAKE;
+    M3.nHomingMode     := E_EpicsHomeCmd.LOW_LIMIT;
+    M3.fHomePosition   := 0;
+
+    M4.bHardwareEnable := TRUE;
+    M4.bPowerSelf      := TRUE;
+    M4.fVelocity       := 0.1;
+    M4.nEnableMode     := E_StageEnableMode.DURING_MOTION;
+    M4.nBrakeMode      := E_StageBrakeMode.NO_BRAKE;
+    M4.nHomingMode     := E_EpicsHomeCmd.LOW_LIMIT;
+    M4.fHomePosition   := 0;
+
+    M5.bHardwareEnable := TRUE;
+    M5.bPowerSelf      := TRUE;
+    M5.fVelocity       := 0.1;
+    M5.nEnableMode     := E_StageEnableMode.DURING_MOTION;
+    M5.nBrakeMode      := E_StageBrakeMode.NO_BRAKE;
+    M5.nHomingMode     := E_EpicsHomeCmd.LOW_LIMIT;
+    M5.fHomePosition   := 0;
+
+    M6.bHardwareEnable := TRUE;
+    M6.bPowerSelf      := TRUE;
+    M6.fVelocity       := 0.1;
+    M6.nEnableMode     := E_StageEnableMode.DURING_MOTION;
+    M6.nBrakeMode      := E_StageBrakeMode.NO_BRAKE;
+    M6.nHomingMode     := E_EpicsHomeCmd.LOW_LIMIT;
+    M6.fHomePosition   := 0;
+
+    M7.bHardwareEnable := TRUE;
+    M7.bPowerSelf      := TRUE;
+    M7.fVelocity       := 0.1;
+    M7.nEnableMode     := E_StageEnableMode.DURING_MOTION;
+    M7.nBrakeMode      := E_StageBrakeMode.NO_BRAKE;
+    M7.nHomingMode     := E_EpicsHomeCmd.LOW_LIMIT;
+    M7.fHomePosition   := 0;
+
+    M8.bHardwareEnable := TRUE;
+    M8.bPowerSelf      := TRUE;
+    M8.fVelocity       := 0.1;
+    M8.nEnableMode     := E_StageEnableMode.DURING_MOTION;
+    M8.nBrakeMode      := E_StageBrakeMode.NO_BRAKE;
+    M8.nHomingMode     := E_EpicsHomeCmd.LOW_LIMIT;
+    M8.fHomePosition   := 0;
+END_IF
 
 //Hardware Enable
 M1.bHardwareEnable	:= TRUE;
@@ -107,9 +177,7 @@ M5.bPowerSelf	:= TRUE;
 M6.bPowerSelf	:= TRUE;
 M7.bPowerSelf	:= TRUE;
 M8.bPowerSelf	:= TRUE;
-
-//Gige Power
-bGigePower := TRUE;]]></ST>
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
