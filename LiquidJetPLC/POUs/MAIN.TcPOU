@@ -69,17 +69,7 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[//Update Axis status
-// Might want to remove
-M1.Axis.ReadStatus();
-M2.Axis.ReadStatus();
-M3.Axis.ReadStatus();
-M4.Axis.ReadStatus();
-M5.Axis.ReadStatus();
-M6.Axis.ReadStatus();
-M7.Axis.ReadStatus();
-M8.Axis.ReadStatus();
-
+      <ST><![CDATA[
 //fbMotion
 fb_SS_TOP_X(stMotionStage := M1);
 fb_SS_TOP_Y(stMotionStage := M2);
