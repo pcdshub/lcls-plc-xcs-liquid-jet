@@ -38,7 +38,7 @@
 		<Image Id="1" AddrType="9" ImageType="3">
 			<Name>Image</Name>
 		</Image>
-		<Image Id="4" AddrType="10" ImageType="3">
+		<Image Id="2" AddrType="10" ImageType="3">
 			<Name>Image-2</Name>
 		</Image>
 		<Box File="E0 (EK1200).xti" Id="22">

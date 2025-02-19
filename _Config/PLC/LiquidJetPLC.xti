@@ -1670,7 +1670,7 @@ External Setpoint Generation:
 					<Type>INT</Type>
 				</Var>
 				<Var>
-					<Name>Main.fbMotion1.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Name>Main.fb_SS_TOP_X.fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
@@ -1719,7 +1719,7 @@ External Setpoint Generation:
 					</SubVar>
 				</Var>
 				<Var>
-					<Name>Main.fbMotion2.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Name>Main.fb_SS_TOP_Y.fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
@@ -1768,7 +1768,7 @@ External Setpoint Generation:
 					</SubVar>
 				</Var>
 				<Var>
-					<Name>Main.fbMotion3.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Name>Main.fb_SS_BOT_X.fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
@@ -1817,7 +1817,7 @@ External Setpoint Generation:
 					</SubVar>
 				</Var>
 				<Var>
-					<Name>Main.fbMotion4.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Name>Main.fb_SS_BOT_Y.fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
@@ -1866,7 +1866,7 @@ External Setpoint Generation:
 					</SubVar>
 				</Var>
 				<Var>
-					<Name>Main.fbMotion5.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Name>Main.fb_JET_X.fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
@@ -1915,7 +1915,7 @@ External Setpoint Generation:
 					</SubVar>
 				</Var>
 				<Var>
-					<Name>Main.fbMotion6.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Name>Main.fb_JET_Y.fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
@@ -1964,7 +1964,7 @@ External Setpoint Generation:
 					</SubVar>
 				</Var>
 				<Var>
-					<Name>Main.fbMotion7.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Name>Main.fb_JET_Z.fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
@@ -2013,7 +2013,7 @@ External Setpoint Generation:
 					</SubVar>
 				</Var>
 				<Var>
-					<Name>Main.fbMotion8.fbDriveVirtual.MasterAxis.NcToPlc</Name>
+					<Name>Main.fb_VH_EPIX_X.fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
@@ -2153,40 +2153,36 @@ External Setpoint Generation:
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>Main.fbMotion1.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Name>Main.fb_SS_TOP_X.fbDriveVirtual.MasterAxis.PlcToNc</Name>
 					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 				<Var>
-					<Name>Main.fbMotion2.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Name>Main.fb_SS_TOP_Y.fbDriveVirtual.MasterAxis.PlcToNc</Name>
 					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 				<Var>
-					<Name>Main.fbMotion3.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Name>Main.fb_SS_BOT_X.fbDriveVirtual.MasterAxis.PlcToNc</Name>
 					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 				<Var>
-					<Name>Main.fbMotion4.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Name>Main.fb_SS_BOT_Y.fbDriveVirtual.MasterAxis.PlcToNc</Name>
 					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 				<Var>
-					<Name>Main.fbMotion5.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Name>Main.fb_JET_X.fbDriveVirtual.MasterAxis.PlcToNc</Name>
 					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 				<Var>
-					<Name>Main.fbMotion6.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Name>Main.fb_JET_Y.fbDriveVirtual.MasterAxis.PlcToNc</Name>
 					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 				<Var>
-					<Name>Main.fbMotion7.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Name>Main.fb_JET_Z.fbDriveVirtual.MasterAxis.PlcToNc</Name>
 					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 				<Var>
-					<Name>Main.fbMotion8.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Name>Main.fb_VH_EPIX_X.fbDriveVirtual.MasterAxis.PlcToNc</Name>
 					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.bGigePower</Name>
-					<Type>BOOL</Type>
 				</Var>
 			</Vars>
 			<Vars VarGrpType="8">
@@ -2300,10 +2296,7 @@ External Setpoint Generation:
 	</Project>
 	<Mappings>
 		<OwnerA Name="LiquidJetPLC Instance">
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^E0 (EK1200)^E5 (EL2004)">
-				<Link VarA="PlcTask Outputs^Main.bGigePower" VarB="Channel 1^Output" AutoLink="true"/>
-			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E22 (EL1088)">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^E0 (EK1200)^EK1122_00_08^E20 (EK1100)^EL1088_01_22">
 				<Link VarA="PlcTask Inputs^Main.M1.bHome" VarB="Channel 5^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^Main.M1.bLimitBackwardEnable" VarB="Channel 3^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^Main.M1.bLimitForwardEnable" VarB="Channel 1^Input" AutoLink="true"/>
@@ -2311,7 +2304,7 @@ External Setpoint Generation:
 				<Link VarA="PlcTask Inputs^Main.M2.bLimitBackwardEnable" VarB="Channel 4^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^Main.M2.bLimitForwardEnable" VarB="Channel 2^Input" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E25 (EL1088)">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^E0 (EK1200)^EK1122_00_08^E20 (EK1100)^EL1088_01_25">
 				<Link VarA="PlcTask Inputs^Main.M3.bHome" VarB="Channel 5^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^Main.M3.bLimitBackwardEnable" VarB="Channel 3^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^Main.M3.bLimitForwardEnable" VarB="Channel 1^Input" AutoLink="true"/>
@@ -2319,7 +2312,7 @@ External Setpoint Generation:
 				<Link VarA="PlcTask Inputs^Main.M4.bLimitBackwardEnable" VarB="Channel 4^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^Main.M4.bLimitForwardEnable" VarB="Channel 2^Input" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^E0 (EK1200)^E7 (EK1122)^E20 (EK1100)^E29 (EL1088)">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^E0 (EK1200)^EK1122_00_08^E20 (EK1100)^EL1088_01_29">
 				<Link VarA="PlcTask Inputs^Main.M5.bLimitBackwardEnable" VarB="Channel 1^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^Main.M5.bLimitForwardEnable" VarB="Channel 3^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^Main.M6.bLimitBackwardEnable" VarB="Channel 7^Input" AutoLink="true"/>
