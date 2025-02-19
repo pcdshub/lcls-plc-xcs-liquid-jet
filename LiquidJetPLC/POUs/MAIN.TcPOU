@@ -148,25 +148,6 @@ IF bInit THEN
     M8.fHomePosition   := 0;
 END_IF
 
-//Hardware Enable
-M1.bHardwareEnable	:= TRUE;
-M2.bHardwareEnable	:= TRUE;
-M3.bHardwareEnable	:= TRUE;
-M4.bHardwareEnable	:= TRUE;
-M5.bHardwareEnable	:= TRUE;
-M6.bHardwareEnable	:= TRUE;
-M7.bHardwareEnable	:= TRUE;
-M8.bHardwareEnable	:= TRUE;
-
-//Power Self
-M1.bPowerSelf	:= TRUE;
-M2.bPowerSelf	:= TRUE;
-M3.bPowerSelf	:= TRUE;
-M4.bPowerSelf	:= TRUE;
-M5.bPowerSelf	:= TRUE;
-M6.bPowerSelf	:= TRUE;
-M7.bPowerSelf	:= TRUE;
-M8.bPowerSelf	:= TRUE;
 ]]></ST>
     </Implementation>
   </POU>
