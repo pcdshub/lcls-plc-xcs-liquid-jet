@@ -1322,8 +1322,6 @@ External Setpoint Generation:
 			<Velo RefSearch="0.2" RefSync="0.2" SlowManual="0.2" FastManual="0.5" Maximum="0.5"/>
 			<TargetPosControl Range="0.001"/>
 			<OtherSettings AllowMotionCmdToSlave="true" PulseDistancePos="0.5" PulseDistanceNeg="0.5"/>
-			<ParameterChanged>22</ParameterChanged>
-			<ParameterChanged>18</ParameterChanged>
 		</AxisPara>
 		<Encoder Name="Enc" EncType="4">
 			<EncPara MaxCount="#x0000ffff">
