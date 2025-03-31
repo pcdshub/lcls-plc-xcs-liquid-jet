@@ -1,0 +1,807 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NC Settings &mdash; pcdshub/lcls-plc-xcs-liquid-jet  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/tree.css?v=837a00b9" />
+      <link rel="stylesheet" type="text/css" href="_static/width.css?v=ab210c7a" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/docs-versions-menu.js?v=3d6a1aea"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            pcdshub/lcls-plc-xcs-liquid-jet
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">NC Settings</a><ul>
+<li><a class="reference internal" href="#axis-1-ss-top-x-mot">Axis 1: SS_TOP_X_MOT</a></li>
+<li><a class="reference internal" href="#axis-2-ss-top-y-mot">Axis 2: SS_TOP_Y_MOT</a></li>
+<li><a class="reference internal" href="#axis-3-ss-bot-x-mot">Axis 3: SS_BOT_X_MOT</a></li>
+<li><a class="reference internal" href="#axis-4-ss-bot-y-mot">Axis 4: SS_BOT_Y_MOT</a></li>
+<li><a class="reference internal" href="#axis-5-jet-x-mot">Axis 5: JET_X_MOT</a></li>
+<li><a class="reference internal" href="#axis-6-jet-y-mot">Axis 6: JET_Y_MOT</a></li>
+<li><a class="reference internal" href="#axis-7-jet-z-mot">Axis 7: JET_Z_MOT</a></li>
+<li><a class="reference internal" href="#axis-8-vh-epix-x-mot">Axis 8: VH_EPIX_X_MOT</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pcdshub/lcls-plc-xcs-liquid-jet</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">NC Settings</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/LiquidJet_nc.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="nc-settings">
+<h1>NC Settings<a class="headerlink" href="#nc-settings" title="Link to this heading"></a></h1>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Axis ID</p></th>
+<th class="head"><p>Name</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>SS_TOP_X_MOT</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>SS_TOP_Y_MOT</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>SS_BOT_X_MOT</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>SS_BOT_Y_MOT</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>JET_X_MOT</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>JET_Y_MOT</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>JET_Z_MOT</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>VH_EPIX_X_MOT</p></td>
+</tr>
+</tbody>
+</table>
+<section id="axis-1-ss-top-x-mot">
+<h2>Axis 1: SS_TOP_X_MOT<a class="headerlink" href="#axis-1-ss-top-x-mot" title="Link to this heading"></a></h2>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Setting</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Axis ID</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>Name</p></td>
+<td><p>SS_TOP_X_MOT</p></td>
+</tr>
+<tr class="row-even"><td><p>AxisType</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>CreateSymbols</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:Acceleration</p></td>
+<td><p>23.8095</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dynamic:AccelerationMaximum</p></td>
+<td><p>50</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:Deceleration</p></td>
+<td><p>23.8095</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dynamic:DecelerationMaximum</p></td>
+<td><p>50</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:Jerk</p></td>
+<td><p>70.8615</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:EncType</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:Inc:RefMode</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:Inc:RefSoftSyncMask</p></td>
+<td><p>#x0000ffff</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:MaxCount</p></td>
+<td><p>#x0000ffff</p></td>
+</tr>
+<tr class="row-odd"><td><p>Id</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>OtherSettings:AllowMotionCmdToSlave</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-odd"><td><p>OtherSettings:PulseDistanceNeg</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-even"><td><p>OtherSettings:PulseDistancePos</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>TargetPosControl:Range</p></td>
+<td><p>0.002</p></td>
+</tr>
+<tr class="row-even"><td><p>Velo:FastManual</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Velo:Maximum</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>Velo:RefSearch</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Velo:RefSync</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-even"><td><p>Velo:SlowManual</p></td>
+<td><p>0.2</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="axis-2-ss-top-y-mot">
+<h2>Axis 2: SS_TOP_Y_MOT<a class="headerlink" href="#axis-2-ss-top-y-mot" title="Link to this heading"></a></h2>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Setting</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Axis ID</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Name</p></td>
+<td><p>SS_TOP_Y_MOT</p></td>
+</tr>
+<tr class="row-even"><td><p>AxisType</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>CreateSymbols</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:Acceleration</p></td>
+<td><p>5.98802</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dynamic:AccelerationMaximum</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:Deceleration</p></td>
+<td><p>5.98802</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dynamic:DecelerationMaximum</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:Jerk</p></td>
+<td><p>17.9282</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:EncType</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:Inc:RefSoftSyncMask</p></td>
+<td><p>#x0000ffff</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:MaxCount</p></td>
+<td><p>#x0000ffff</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:Offset</p></td>
+<td><p>6.4701</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:SoftEndMinControl:Enable</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:SoftEndMinControl:Range</p></td>
+<td><p>0.2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Id</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>OtherSettings:AllowMotionCmdToSlave</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-odd"><td><p>OtherSettings:PulseDistanceNeg</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-even"><td><p>OtherSettings:PulseDistancePos</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>TargetPosControl:Range</p></td>
+<td><p>0.001</p></td>
+</tr>
+<tr class="row-even"><td><p>Velo:FastManual</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Velo:Maximum</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-even"><td><p>Velo:RefSearch</p></td>
+<td><p>0.2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Velo:RefSync</p></td>
+<td><p>0.2</p></td>
+</tr>
+<tr class="row-even"><td><p>Velo:SlowManual</p></td>
+<td><p>0.2</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="axis-3-ss-bot-x-mot">
+<h2>Axis 3: SS_BOT_X_MOT<a class="headerlink" href="#axis-3-ss-bot-x-mot" title="Link to this heading"></a></h2>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Setting</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Axis ID</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-odd"><td><p>Name</p></td>
+<td><p>SS_BOT_X_MOT</p></td>
+</tr>
+<tr class="row-even"><td><p>AxisType</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>CreateSymbols</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:Acceleration</p></td>
+<td><p>23.8095</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dynamic:AccelerationMaximum</p></td>
+<td><p>50</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:Deceleration</p></td>
+<td><p>23.8095</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dynamic:DecelerationMaximum</p></td>
+<td><p>50</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:Jerk</p></td>
+<td><p>70.8615</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:EncType</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:Inc:RefSoftSyncMask</p></td>
+<td><p>#x0000ffff</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:MaxCount</p></td>
+<td><p>#x0000ffff</p></td>
+</tr>
+<tr class="row-even"><td><p>Id</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-odd"><td><p>OtherSettings:AllowMotionCmdToSlave</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>OtherSettings:PulseDistanceNeg</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>OtherSettings:PulseDistancePos</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-even"><td><p>TargetPosControl:Range</p></td>
+<td><p>0.002</p></td>
+</tr>
+<tr class="row-odd"><td><p>Velo:FastManual</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-even"><td><p>Velo:Maximum</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>Velo:RefSearch</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-even"><td><p>Velo:RefSync</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Velo:SlowManual</p></td>
+<td><p>0.2</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="axis-4-ss-bot-y-mot">
+<h2>Axis 4: SS_BOT_Y_MOT<a class="headerlink" href="#axis-4-ss-bot-y-mot" title="Link to this heading"></a></h2>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Setting</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Axis ID</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-odd"><td><p>Name</p></td>
+<td><p>SS_BOT_Y_MOT</p></td>
+</tr>
+<tr class="row-even"><td><p>AxisType</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>CreateSymbols</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:Acceleration</p></td>
+<td><p>5.98802</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dynamic:AccelerationMaximum</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:Deceleration</p></td>
+<td><p>5.98802</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dynamic:DecelerationMaximum</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:Jerk</p></td>
+<td><p>17.9282</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:EncType</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:Inc:RefSoftSyncMask</p></td>
+<td><p>#x0000ffff</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:MaxCount</p></td>
+<td><p>#x0000ffff</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:Offset</p></td>
+<td><p>-3.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:SoftEndMinControl:Enable</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:SoftEndMinControl:Range</p></td>
+<td><p>0.1</p></td>
+</tr>
+<tr class="row-odd"><td><p>Id</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>OtherSettings:AllowMotionCmdToSlave</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-odd"><td><p>OtherSettings:PulseDistanceNeg</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-even"><td><p>OtherSettings:PulseDistancePos</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>TargetPosControl:Range</p></td>
+<td><p>0.001</p></td>
+</tr>
+<tr class="row-even"><td><p>Velo:FastManual</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Velo:Maximum</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-even"><td><p>Velo:RefSearch</p></td>
+<td><p>0.2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Velo:RefSync</p></td>
+<td><p>0.2</p></td>
+</tr>
+<tr class="row-even"><td><p>Velo:SlowManual</p></td>
+<td><p>0.2</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="axis-5-jet-x-mot">
+<h2>Axis 5: JET_X_MOT<a class="headerlink" href="#axis-5-jet-x-mot" title="Link to this heading"></a></h2>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Setting</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Axis ID</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Name</p></td>
+<td><p>JET_X_MOT</p></td>
+</tr>
+<tr class="row-even"><td><p>AxisType</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>CreateSymbols</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:Acceleration</p></td>
+<td><p>23.8095</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dynamic:AccelerationMaximum</p></td>
+<td><p>50</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:Deceleration</p></td>
+<td><p>23.8095</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dynamic:DecelerationMaximum</p></td>
+<td><p>50</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:Jerk</p></td>
+<td><p>70.8615</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:EncType</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:Inc:RefSoftSyncMask</p></td>
+<td><p>#x0000ffff</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:Inverse</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:MaxCount</p></td>
+<td><p>#x0000ffff</p></td>
+</tr>
+<tr class="row-odd"><td><p>Id</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-even"><td><p>OtherSettings:AllowMotionCmdToSlave</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-odd"><td><p>OtherSettings:PulseDistanceNeg</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-even"><td><p>OtherSettings:PulseDistancePos</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>TargetPosControl:Range</p></td>
+<td><p>0.002</p></td>
+</tr>
+<tr class="row-even"><td><p>Velo:FastManual</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Velo:Maximum</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>Velo:RefSearch</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Velo:RefSync</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-even"><td><p>Velo:SlowManual</p></td>
+<td><p>0.2</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="axis-6-jet-y-mot">
+<h2>Axis 6: JET_Y_MOT<a class="headerlink" href="#axis-6-jet-y-mot" title="Link to this heading"></a></h2>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Setting</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Axis ID</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>Name</p></td>
+<td><p>JET_Y_MOT</p></td>
+</tr>
+<tr class="row-even"><td><p>AxisType</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>CreateSymbols</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:Acceleration</p></td>
+<td><p>5.98802</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dynamic:AccelerationMaximum</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:Deceleration</p></td>
+<td><p>5.98802</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dynamic:DecelerationMaximum</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:Jerk</p></td>
+<td><p>17.9282</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:EncType</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:Inc:RefSoftSyncMask</p></td>
+<td><p>#x0000ffff</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:MaxCount</p></td>
+<td><p>#x0000ffff</p></td>
+</tr>
+<tr class="row-even"><td><p>Id</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>OtherSettings:AllowMotionCmdToSlave</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>OtherSettings:PulseDistanceNeg</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>OtherSettings:PulseDistancePos</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-even"><td><p>TargetPosControl:Range</p></td>
+<td><p>0.001</p></td>
+</tr>
+<tr class="row-odd"><td><p>Velo:FastManual</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-even"><td><p>Velo:Maximum</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Velo:RefSearch</p></td>
+<td><p>0.2</p></td>
+</tr>
+<tr class="row-even"><td><p>Velo:RefSync</p></td>
+<td><p>0.2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Velo:SlowManual</p></td>
+<td><p>0.2</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="axis-7-jet-z-mot">
+<h2>Axis 7: JET_Z_MOT<a class="headerlink" href="#axis-7-jet-z-mot" title="Link to this heading"></a></h2>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Setting</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Axis ID</p></td>
+<td><p>7</p></td>
+</tr>
+<tr class="row-odd"><td><p>Name</p></td>
+<td><p>JET_Z_MOT</p></td>
+</tr>
+<tr class="row-even"><td><p>AxisType</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>CreateSymbols</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:Acceleration</p></td>
+<td><p>23.8094883787375</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dynamic:AccelerationMaximum</p></td>
+<td><p>50</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:Deceleration</p></td>
+<td><p>23.8094883787375</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dynamic:DecelerationMaximum</p></td>
+<td><p>50</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:Jerk</p></td>
+<td><p>70.8614671071547</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:EncType</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:Inc:RefSoftSyncMask</p></td>
+<td><p>#x0000ffff</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:MaxCount</p></td>
+<td><p>#x0000ffff</p></td>
+</tr>
+<tr class="row-even"><td><p>Id</p></td>
+<td><p>7</p></td>
+</tr>
+<tr class="row-odd"><td><p>OtherSettings:AllowMotionCmdToSlave</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>OtherSettings:PulseDistanceNeg</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>OtherSettings:PulseDistancePos</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-even"><td><p>TargetPosControl:Range</p></td>
+<td><p>0.002</p></td>
+</tr>
+<tr class="row-odd"><td><p>Velo:FastManual</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-even"><td><p>Velo:Maximum</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>Velo:RefSearch</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-even"><td><p>Velo:RefSync</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Velo:SlowManual</p></td>
+<td><p>0.2</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="axis-8-vh-epix-x-mot">
+<h2>Axis 8: VH_EPIX_X_MOT<a class="headerlink" href="#axis-8-vh-epix-x-mot" title="Link to this heading"></a></h2>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Setting</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Axis ID</p></td>
+<td><p>8</p></td>
+</tr>
+<tr class="row-odd"><td><p>Name</p></td>
+<td><p>VH_EPIX_X_MOT</p></td>
+</tr>
+<tr class="row-even"><td><p>AxisType</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>CreateSymbols</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:Acceleration</p></td>
+<td><p>23.8095</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dynamic:AccelerationMaximum</p></td>
+<td><p>50</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:Deceleration</p></td>
+<td><p>23.8095</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dynamic:DecelerationMaximum</p></td>
+<td><p>50</p></td>
+</tr>
+<tr class="row-even"><td><p>Dynamic:Jerk</p></td>
+<td><p>70.8615</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:EncType</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:Inc:RefMode</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:Inc:RefSoftSyncMask</p></td>
+<td><p>#x0000ffff</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:Inverse</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enc:MaxCount</p></td>
+<td><p>#x0000ffff</p></td>
+</tr>
+<tr class="row-even"><td><p>Enc:ScaleFactorNumerator</p></td>
+<td><p>5e-05</p></td>
+</tr>
+<tr class="row-odd"><td><p>Id</p></td>
+<td><p>8</p></td>
+</tr>
+<tr class="row-even"><td><p>OtherSettings:AllowMotionCmdToSlave</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-odd"><td><p>OtherSettings:PulseDistanceNeg</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-even"><td><p>OtherSettings:PulseDistancePos</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>TargetPosControl:Range</p></td>
+<td><p>0.005</p></td>
+</tr>
+<tr class="row-even"><td><p>Velo:FastManual</p></td>
+<td><p>0.2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Velo:Maximum</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>Velo:RefSearch</p></td>
+<td><p>0.1</p></td>
+</tr>
+<tr class="row-odd"><td><p>Velo:RefSync</p></td>
+<td><p>0.1</p></td>
+</tr>
+<tr class="row-even"><td><p>Velo:SlowManual</p></td>
+<td><p>0.1</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, SLAC National Accelerator Laboratory.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

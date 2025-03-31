@@ -1,0 +1,285 @@
+
+NC Settings
+-----------
+
+.. csv-table::
+    :header: Axis ID, Name
+    :align: center
+
+        1, SS_TOP_X_MOT
+        2, SS_TOP_Y_MOT
+        3, SS_BOT_X_MOT
+        4, SS_BOT_Y_MOT
+        5, JET_X_MOT
+        6, JET_Y_MOT
+        7, JET_Z_MOT
+        8, VH_EPIX_X_MOT
+
+
+
+Axis 1: SS_TOP_X_MOT
+^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 1
+    Name, SS_TOP_X_MOT
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:Acceleration, 23.8095
+    Dynamic:AccelerationMaximum, 50
+    Dynamic:Deceleration, 23.8095
+    Dynamic:DecelerationMaximum, 50
+    Dynamic:Jerk, 70.8615
+    Enc:EncType, 4
+    Enc:Inc:RefMode, 2
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:MaxCount, #x0000ffff
+    Id, 1
+    OtherSettings:AllowMotionCmdToSlave, true
+    OtherSettings:PulseDistanceNeg, 0.5
+    OtherSettings:PulseDistancePos, 0.5
+    TargetPosControl:Range, 0.002
+    Velo:FastManual, 0.5
+    Velo:Maximum, 1
+    Velo:RefSearch, 0.5
+    Velo:RefSync, 0.5
+    Velo:SlowManual, 0.2
+
+
+
+Axis 2: SS_TOP_Y_MOT
+^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 2
+    Name, SS_TOP_Y_MOT
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:Acceleration, 5.98802
+    Dynamic:AccelerationMaximum, 10
+    Dynamic:Deceleration, 5.98802
+    Dynamic:DecelerationMaximum, 10
+    Dynamic:Jerk, 17.9282
+    Enc:EncType, 4
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:MaxCount, #x0000ffff
+    Enc:Offset, 6.4701
+    Enc:SoftEndMinControl:Enable, true
+    Enc:SoftEndMinControl:Range, 0.2
+    Id, 2
+    OtherSettings:AllowMotionCmdToSlave, true
+    OtherSettings:PulseDistanceNeg, 0.5
+    OtherSettings:PulseDistancePos, 0.5
+    TargetPosControl:Range, 0.001
+    Velo:FastManual, 0.5
+    Velo:Maximum, 0.5
+    Velo:RefSearch, 0.2
+    Velo:RefSync, 0.2
+    Velo:SlowManual, 0.2
+
+
+
+Axis 3: SS_BOT_X_MOT
+^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 3
+    Name, SS_BOT_X_MOT
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:Acceleration, 23.8095
+    Dynamic:AccelerationMaximum, 50
+    Dynamic:Deceleration, 23.8095
+    Dynamic:DecelerationMaximum, 50
+    Dynamic:Jerk, 70.8615
+    Enc:EncType, 4
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:MaxCount, #x0000ffff
+    Id, 3
+    OtherSettings:AllowMotionCmdToSlave, true
+    OtherSettings:PulseDistanceNeg, 0.5
+    OtherSettings:PulseDistancePos, 0.5
+    TargetPosControl:Range, 0.002
+    Velo:FastManual, 0.5
+    Velo:Maximum, 1
+    Velo:RefSearch, 0.5
+    Velo:RefSync, 0.5
+    Velo:SlowManual, 0.2
+
+
+
+Axis 4: SS_BOT_Y_MOT
+^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 4
+    Name, SS_BOT_Y_MOT
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:Acceleration, 5.98802
+    Dynamic:AccelerationMaximum, 10
+    Dynamic:Deceleration, 5.98802
+    Dynamic:DecelerationMaximum, 10
+    Dynamic:Jerk, 17.9282
+    Enc:EncType, 4
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:MaxCount, #x0000ffff
+    Enc:Offset, -3.5
+    Enc:SoftEndMinControl:Enable, true
+    Enc:SoftEndMinControl:Range, 0.1
+    Id, 4
+    OtherSettings:AllowMotionCmdToSlave, true
+    OtherSettings:PulseDistanceNeg, 0.5
+    OtherSettings:PulseDistancePos, 0.5
+    TargetPosControl:Range, 0.001
+    Velo:FastManual, 0.5
+    Velo:Maximum, 0.5
+    Velo:RefSearch, 0.2
+    Velo:RefSync, 0.2
+    Velo:SlowManual, 0.2
+
+
+
+Axis 5: JET_X_MOT
+^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 5
+    Name, JET_X_MOT
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:Acceleration, 23.8095
+    Dynamic:AccelerationMaximum, 50
+    Dynamic:Deceleration, 23.8095
+    Dynamic:DecelerationMaximum, 50
+    Dynamic:Jerk, 70.8615
+    Enc:EncType, 4
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:Inverse, true
+    Enc:MaxCount, #x0000ffff
+    Id, 5
+    OtherSettings:AllowMotionCmdToSlave, true
+    OtherSettings:PulseDistanceNeg, 0.5
+    OtherSettings:PulseDistancePos, 0.5
+    TargetPosControl:Range, 0.002
+    Velo:FastManual, 0.5
+    Velo:Maximum, 1
+    Velo:RefSearch, 0.5
+    Velo:RefSync, 0.5
+    Velo:SlowManual, 0.2
+
+
+
+Axis 6: JET_Y_MOT
+^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 6
+    Name, JET_Y_MOT
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:Acceleration, 5.98802
+    Dynamic:AccelerationMaximum, 10
+    Dynamic:Deceleration, 5.98802
+    Dynamic:DecelerationMaximum, 10
+    Dynamic:Jerk, 17.9282
+    Enc:EncType, 4
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:MaxCount, #x0000ffff
+    Id, 6
+    OtherSettings:AllowMotionCmdToSlave, true
+    OtherSettings:PulseDistanceNeg, 0.5
+    OtherSettings:PulseDistancePos, 0.5
+    TargetPosControl:Range, 0.001
+    Velo:FastManual, 0.5
+    Velo:Maximum, 0.5
+    Velo:RefSearch, 0.2
+    Velo:RefSync, 0.2
+    Velo:SlowManual, 0.2
+
+
+
+Axis 7: JET_Z_MOT
+^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 7
+    Name, JET_Z_MOT
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:Acceleration, 23.8094883787375
+    Dynamic:AccelerationMaximum, 50
+    Dynamic:Deceleration, 23.8094883787375
+    Dynamic:DecelerationMaximum, 50
+    Dynamic:Jerk, 70.8614671071547
+    Enc:EncType, 4
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:MaxCount, #x0000ffff
+    Id, 7
+    OtherSettings:AllowMotionCmdToSlave, true
+    OtherSettings:PulseDistanceNeg, 0.5
+    OtherSettings:PulseDistancePos, 0.5
+    TargetPosControl:Range, 0.002
+    Velo:FastManual, 0.5
+    Velo:Maximum, 1
+    Velo:RefSearch, 0.5
+    Velo:RefSync, 0.5
+    Velo:SlowManual, 0.2
+
+
+
+Axis 8: VH_EPIX_X_MOT
+^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 8
+    Name, VH_EPIX_X_MOT
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:Acceleration, 23.8095
+    Dynamic:AccelerationMaximum, 50
+    Dynamic:Deceleration, 23.8095
+    Dynamic:DecelerationMaximum, 50
+    Dynamic:Jerk, 70.8615
+    Enc:EncType, 4
+    Enc:Inc:RefMode, 2
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:Inverse, true
+    Enc:MaxCount, #x0000ffff
+    Enc:ScaleFactorNumerator, 5e-05
+    Id, 8
+    OtherSettings:AllowMotionCmdToSlave, true
+    OtherSettings:PulseDistanceNeg, 0.5
+    OtherSettings:PulseDistancePos, 0.5
+    TargetPosControl:Range, 0.005
+    Velo:FastManual, 0.2
+    Velo:Maximum, 2
+    Velo:RefSearch, 0.1
+    Velo:RefSync, 0.1
+    Velo:SlowManual, 0.1
+
+
