@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <POU Name="Main" Id="{c8ef33a4-305b-4802-9860-82a055d32b0a}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM Main
 VAR
@@ -96,8 +96,8 @@ IF bInit THEN
     M2.fVelocity       := 0.1;
     M2.nEnableMode     := E_StageEnableMode.DURING_MOTION;
     M2.nBrakeMode      := E_StageBrakeMode.NO_BRAKE;
-    M2.nHomingMode     := E_EpicsHomeCmd.LOW_LIMIT;
-    M2.fHomePosition   := 0;
+    M2.nHomingMode     := E_EpicsHomeCmd.HIGH_LIMIT;
+    M2.fHomePosition   := 5.87;
 
     M3.bHardwareEnable := TRUE;
     M3.bPowerSelf      := TRUE;
@@ -112,15 +112,15 @@ IF bInit THEN
     M4.fVelocity       := 0.1;
     M4.nEnableMode     := E_StageEnableMode.DURING_MOTION;
     M4.nBrakeMode      := E_StageBrakeMode.NO_BRAKE;
-    M4.nHomingMode     := E_EpicsHomeCmd.LOW_LIMIT;
-    M4.fHomePosition   := 0;
+    M4.nHomingMode     := E_EpicsHomeCmd.HIGH_LIMIT;
+    M4.fHomePosition   := 5.25;
 
     M5.bHardwareEnable := TRUE;
     M5.bPowerSelf      := TRUE;
     M5.fVelocity       := 0.1;
     M5.nEnableMode     := E_StageEnableMode.DURING_MOTION;
     M5.nBrakeMode      := E_StageBrakeMode.NO_BRAKE;
-    M5.nHomingMode     := E_EpicsHomeCmd.LOW_LIMIT;
+    M5.nHomingMode     := E_EpicsHomeCmd.HIGH_LIMIT;
     M5.fHomePosition   := 0;
 
     M6.bHardwareEnable := TRUE;
